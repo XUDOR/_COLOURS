@@ -359,6 +359,18 @@ document.addEventListener('DOMContentLoaded', () => {
           const detailsElement = document.createElement('details');
           const summaryElement = document.createElement('summary');
           summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+          // Create a random color square for the category heading
+          const randomColor = organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
+          const colorSquare = document.createElement('div');
+          colorSquare.style.width = '40px';
+          colorSquare.style.height = '40px';
+          colorSquare.style.backgroundColor = randomColor;
+          colorSquare.style.marginRight = '10px';
+          colorSquare.className = 'color-square';
+
+
+          summaryElement.prepend(colorSquare);
           detailsElement.appendChild(summaryElement);
           detailsElement.classList.add('category-heading');
 
