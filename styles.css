@@ -116,62 +116,71 @@ details[open] .category-heading summary {
   z-index: 1000;
   font-size: 14px;
 }
-
 /* Mobile styling */
 @media (max-width: 600px) {
 
   body {
     font-size: 0.9em;
-    /* Slightly smaller text for mobile */
     line-height: 1.4;
     padding: 10px;
-    /* Reduce padding on small screens */
   }
 
   .title {
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: lighter;
     color: #666;
-    border-bottom: 5px solid #fff;
+    border-bottom: 3px solid #fff;
   }
 
   .container {
     padding: 10px;
-    /* Reduced padding for smaller viewports */
   }
 
+  /* Adjust category container to two columns on mobile */
   .category-container {
-    grid-template-columns: 1fr;
-    /* Single column on mobile */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
 
   .color-card {
     width: 100%;
-    /* Full width on mobile */
     height: auto;
-    /* Adjust height to fit content */
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .color-display {
-    height: 100px;
-    /* Adjusted display height for mobile */
+    height: 80px;
+    cursor: pointer;
+  }
+
+  .color-info {
+    padding: 8px;
   }
 
   .color-name {
-    font-size: 16px;
-    /* Slightly larger for readability on mobile */
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .color-value {
-    font-size: 14px;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
   }
 
   .copied-notification {
     font-size: 12px;
-    /* Smaller text for mobile */
     bottom: 10px;
     right: 10px;
   }
