@@ -26,7 +26,7 @@ const organizedColors = {
   ],
   greys: [
     { name: "Eiderdown", hex: "#E0E0D5" },
-   
+
     { name: "Antler", hex: "#D8D5CB" },
     { name: "Antler II", hex: "#D1CEC5" },
     { name: "Concrete", hex: "#777068" },
@@ -277,141 +277,170 @@ const organizedColors = {
     { name: "Unicorn", hex: "#EADDCA" },
   ],
 };
-
 document.addEventListener('DOMContentLoaded', () => {
   const colorGrid = document.getElementById('colorGrid');
   let displayFormat = 'hex'; // Default format
+  let applyToBody = false; // Boolean to track "Body" toggle state
+
+  // Dark mode toggle
+  document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // Body toggle to control background update behavior
+  document.getElementById('bodyToggle').addEventListener('click', () => {
+    applyToBody = !applyToBody;
+    document.getElementById('bodyToggle').classList.toggle('active', applyToBody);
+  });
+
+  // Function to copy hex value to clipboard input and optionally update background
+  function copyToClipboardInput(hex) {
+    const clipboardInput = document.getElementById('clipboardInput');
+    clipboardInput.value = hex;
+    navigator.clipboard.writeText(hex); // Copy to clipboard
+
+    // Update background only if "Body" toggle is active
+    if (applyToBody) {
+        document.body.style.backgroundColor = hex;
+    }
+  }
+
+  // Event listener for clipboard input changes (manual updates)
+  document.getElementById('clipboardInput').addEventListener('input', (event) => {
+    const hex = event.target.value;
+    if (applyToBody) {
+        document.body.style.backgroundColor = hex;
+    }
+  });
 
   // Function to convert hex to HSL
   function hexToHSL(hex) {
-      hex = hex.replace('#', '');
-      const r = parseInt(hex.substring(0, 2), 16) / 255;
-      const g = parseInt(hex.substring(2, 4), 16) / 255;
-      const b = parseInt(hex.substring(4, 6), 16) / 255;
-      
-      const max = Math.max(r, g, b);
-      const min = Math.min(r, g, b);
-      let h, s, l = (max + min) / 2;
+    hex = hex.replace('#', '');
+    const r = parseInt(hex.substring(0, 2), 16) / 255;
+    const g = parseInt(hex.substring(2, 4), 16) / 255;
+    const b = parseInt(hex.substring(4, 6), 16) / 255;
 
-      if (max === min) {
-          h = s = 0;
-      } else {
-          const d = max - min;
-          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-          switch (max) {
-              case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-              case g: h = (b - r) / d + 2; break;
-              case b: h = (r - g) / d + 4; break;
-          }
-          h /= 6;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
       }
+      h /= 6;
+    }
 
-      return {
-          h: Math.round(h * 360),
-          s: Math.round(s * 100),
-          l: Math.round(l * 100)
-      };
+    return {
+      h: Math.round(h * 360),
+      s: Math.round(s * 100),
+      l: Math.round(l * 100)
+    };
   }
 
   // Function to convert hex to RGB
   function hexToRGB(hex) {
-      hex = hex.replace('#', '');
-      const r = parseInt(hex.substring(0, 2), 16);
-      const g = parseInt(hex.substring(2, 4), 16);
-      const b = parseInt(hex.substring(4, 6), 16);
-      return `rgb(${r}, ${g}, ${b})`;
+    hex = hex.replace('#', '');
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+    return `rgb(${r}, ${g}, ${b})`;
   }
 
   // Function to update display format for color values
   function updateDisplayFormat(format) {
-      displayFormat = format;
-      document.querySelectorAll('.color-card').forEach(card => {
-          const hex = card.querySelector('.color-display').dataset.hex;
-          const valueElement = card.querySelector('.color-value');
+    displayFormat = format;
+    document.querySelectorAll('.color-card').forEach(card => {
+      const hex = card.querySelector('.color-display').dataset.hex;
+      const valueElement = card.querySelector('.color-value');
 
-          switch (displayFormat) {
-              case 'rgb':
-                  valueElement.textContent = hexToRGB(hex);
-                  break;
-              case 'hsl':
-                  const hsl = hexToHSL(hex);
-                  valueElement.textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
-                  break;
-              default:
-                  valueElement.textContent = hex;
-                  break;
-          }
-      });
+      switch (displayFormat) {
+        case 'rgb':
+          valueElement.textContent = hexToRGB(hex);
+          break;
+        case 'hsl':
+          const hsl = hexToHSL(hex);
+          valueElement.textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+          break;
+        default:
+          valueElement.textContent = hex;
+          break;
+      }
+    });
   }
 
   // Event listener for toggling display format
   document.querySelectorAll('.toggle-nav button').forEach(button => {
-      button.addEventListener('click', () => {
-          document.querySelectorAll('.toggle-nav button').forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          updateDisplayFormat(button.dataset.format);
-      });
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-nav button').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      updateDisplayFormat(button.dataset.format);
+    });
   });
 
   // Render colors by category
   for (const category in organizedColors) {
-      if (organizedColors.hasOwnProperty(category)) {
-          const detailsElement = document.createElement('details');
-          const summaryElement = document.createElement('summary');
-          summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+    if (organizedColors.hasOwnProperty(category)) {
+      const detailsElement = document.createElement('details');
+      const summaryElement = document.createElement('summary');
+      summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
 
-          // Create a random color square for the category heading
-          const randomColor = organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
-          const colorSquare = document.createElement('div');
-          colorSquare.style.width = '40px';
-          colorSquare.style.height = '40px';
-          colorSquare.style.backgroundColor = randomColor;
-          colorSquare.style.marginRight = '10px';
-          colorSquare.className = 'color-square';
+      // Create a random color square for the category heading
+      const randomColor = organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
+      const colorSquare = document.createElement('div');
+      colorSquare.style.width = '40px';
+      colorSquare.style.height = '40px';
+      colorSquare.style.backgroundColor = randomColor;
+      colorSquare.style.marginRight = '10px';
+      colorSquare.className = 'color-square';
 
+      summaryElement.prepend(colorSquare);
+      detailsElement.appendChild(summaryElement);
+      detailsElement.classList.add('category-heading');
 
-          summaryElement.prepend(colorSquare);
-          detailsElement.appendChild(summaryElement);
-          detailsElement.classList.add('category-heading');
+      const categoryContainer = document.createElement('div');
+      categoryContainer.className = 'category-container';
 
-          const categoryContainer = document.createElement('div');
-          categoryContainer.className = 'category-container';
-
-          organizedColors[category].forEach(color => {
-              const colorCard = document.createElement('div');
-              colorCard.className = 'color-card';
-              colorCard.innerHTML = `
+      organizedColors[category].forEach(color => {
+        const colorCard = document.createElement('div');
+        colorCard.className = 'color-card';
+        colorCard.innerHTML = `
                   <div class="color-display" style="background-color: ${color.hex}" data-hex="${color.hex}"></div>
                   <div class="color-info">
                       <h3 class="color-name">${color.name}</h3>
                       <div class="color-value">${color.hex}</div>
                   </div>
               `;
-              categoryContainer.appendChild(colorCard);
-          });
+        categoryContainer.appendChild(colorCard);
+      });
 
-          detailsElement.appendChild(categoryContainer);
-          colorGrid.appendChild(detailsElement);
-      }
+      detailsElement.appendChild(categoryContainer);
+      colorGrid.appendChild(detailsElement);
+    }
   }
 
   // Click-to-copy functionality
-  document.addEventListener('click', function(e) {
-      if (e.target && e.target.classList.contains('color-display')) {
-          const hex = e.target.dataset.hex;
-          navigator.clipboard.writeText(hex).then(() => {
-              const notification = document.createElement('div');
-              notification.className = 'copied-notification';
-              notification.textContent = `Copied ${hex}`;
-              document.body.appendChild(notification);
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.classList.contains('color-display')) {
+      const hex = e.target.dataset.hex;
+      copyToClipboardInput(hex); // Set clipboard input value
+      const notification = document.createElement('div');
+      notification.className = 'copied-notification';
+      notification.textContent = `Copied ${hex}`;
+      document.body.appendChild(notification);
 
-              notification.style.display = 'block';
-              setTimeout(() => {
-                  notification.style.display = 'none';
-                  notification.remove();
-              }, 2000);
-          });
-      }
+      notification.style.display = 'block';
+      setTimeout(() => {
+        notification.style.display = 'none';
+        notification.remove();
+      }, 2000);
+    }
   });
 });
 

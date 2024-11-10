@@ -10,6 +10,24 @@ body {
   /* Light background for contrast */
 }
 
+
+
+body.dark-mode {
+  background-color: #000;
+  
+}
+
+/* Clipboard input styling */
+#clipboardInput {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
 .header {
   display: flex;
   align-items: center;
