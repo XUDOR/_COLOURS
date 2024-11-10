@@ -321,7 +321,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.backgroundColor = defaultBackgroundColor;
     titleElement.style.color = defaultTextColor; // Reset title color
     document.body.style.color = defaultTextColor; // Reset body text color
-    console.log('Background and text colors reset to default.');
+
+    // Reset category heading text color to default
+    document.querySelectorAll('.category-heading summary').forEach(heading => {
+      heading.style.color = defaultTextColor;
+    });
+    console.log('Background, title, and category heading colors reset to default.');
   });
 
   // Function to handle copying of the hex value and updating background/text colors independently
@@ -339,6 +344,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (applyToText) {
       titleElement.style.color = hex;
       document.body.style.color = hex;
+      // Update category heading text color
+      document.querySelectorAll('.category-heading summary').forEach(heading => {
+        heading.style.color = hex;
+      });
     }
   }
 
@@ -353,6 +362,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (applyToText) {
       titleElement.style.color = hex;
       document.body.style.color = hex;
+      // Update category heading text color
+      document.querySelectorAll('.category-heading summary').forEach(heading => {
+        heading.style.color = hex;
+      });
     }
   });
 
@@ -486,5 +499,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
