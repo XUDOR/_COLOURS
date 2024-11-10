@@ -10,6 +10,38 @@ body {
   /* Light background for contrast */
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.toggle-nav {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.toggle-nav button {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 5px;
+  padding: 10px;
+  margin: 3px;
+  
+}
+
+.toggle-nav button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+
 /* Container styles */
 .container {
   max-width: 1200px;

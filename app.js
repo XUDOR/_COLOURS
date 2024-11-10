@@ -279,9 +279,9 @@ const organizedColors = {
   ],
 };
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const colorGrid = document.getElementById('colorGrid');
+  let displayFormat = 'hex'; // Default format
 
   // Function to convert hex to HSL
   function hexToHSL(hex) {
@@ -323,10 +323,40 @@ document.addEventListener('DOMContentLoaded', () => {
       return `rgb(${r}, ${g}, ${b})`;
   }
 
+  // Function to update display format for color values
+  function updateDisplayFormat(format) {
+      displayFormat = format;
+      document.querySelectorAll('.color-card').forEach(card => {
+          const hex = card.querySelector('.color-display').dataset.hex;
+          const valueElement = card.querySelector('.color-value');
+
+          switch (displayFormat) {
+              case 'rgb':
+                  valueElement.textContent = hexToRGB(hex);
+                  break;
+              case 'hsl':
+                  const hsl = hexToHSL(hex);
+                  valueElement.textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+                  break;
+              default:
+                  valueElement.textContent = hex;
+                  break;
+          }
+      });
+  }
+
+  // Event listener for toggling display format
+  document.querySelectorAll('.toggle-nav button').forEach(button => {
+      button.addEventListener('click', () => {
+          document.querySelectorAll('.toggle-nav button').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          updateDisplayFormat(button.dataset.format);
+      });
+  });
+
   // Render colors by category
   for (const category in organizedColors) {
       if (organizedColors.hasOwnProperty(category)) {
-          // Create collapsible details element
           const detailsElement = document.createElement('details');
           const summaryElement = document.createElement('summary');
           summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
@@ -336,7 +366,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const categoryContainer = document.createElement('div');
           categoryContainer.className = 'category-container';
 
-          // Loop over colors in this category
           organizedColors[category].forEach(color => {
               const colorCard = document.createElement('div');
               colorCard.className = 'color-card';
@@ -350,13 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
               categoryContainer.appendChild(colorCard);
           });
 
-          // Append container to details
           detailsElement.appendChild(categoryContainer);
           colorGrid.appendChild(detailsElement);
       }
   }
 
-  // Add click-to-copy functionality
+  // Click-to-copy functionality
   document.addEventListener('click', function(e) {
       if (e.target && e.target.classList.contains('color-display')) {
           const hex = e.target.dataset.hex;
@@ -366,7 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
               notification.textContent = `Copied ${hex}`;
               document.body.appendChild(notification);
 
-              // Show and remove notification
               notification.style.display = 'block';
               setTimeout(() => {
                   notification.style.display = 'none';

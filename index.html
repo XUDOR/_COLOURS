@@ -8,11 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">RDX Color Palette 2024</div>
+        <header class="header">
+            <div class="title">RDX Color Palette 2024</div>
+            <nav class="toggle-nav">
+                <button data-format="hex">Hex</button>
+                <button data-format="rgb">RGB</button>
+                <button data-format="hsl">HSL</button>
+            </nav>
+        </header>
         <div class="color-grid" id="colorGrid">
             <!-- Categories and colors will be populated by JavaScript -->
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
