@@ -40,7 +40,6 @@ const organizedColors = {
   ],
   greys: [
     { name: "Eiderdown", hex: "#E0E0D5" },
-    { name: "Bicycle", hex: "#E0ECED" },
     { name: "Dolphin", hex: "#DFE5EA" },
     { name: "Antler", hex: "#D8D5CB" },
     { name: "Antler II", hex: "#D1CEC5" },
@@ -71,7 +70,6 @@ const organizedColors = {
     { name: "SeaStone", hex: "#5A5956" },
     { name: "Boot", hex: "#494842" },
     { name: "SeaStone", hex: "#E2E0D7" },
-    { name: "a la Mode", hex: "#E6EEEF" },
     { name: "Designer II", hex: "#D1D6C5" },
     { name: "Iris I", hex: "#606062" },
     { name: "Iris II", hex: "#222827" },
@@ -84,12 +82,6 @@ const organizedColors = {
     { name: "Smoke", hex: "#41454D" },
     { name: "Glacier", hex: "#D9D9D9" },
     { name: "Glacier II", hex: "#E3E3E0" },
-    { name: "Unicorn", hex: "#94A8A5" },
-    { name: "New Shark", hex: "#829D9E" },
-    { name: "Vespa", hex: "#CADBDA" },
-    { name: "Porpoise", hex: "#C5D8D6" },
-    { name: "Placeholder", hex: "#D5E2E0" },
-    { name: "Riverstone", hex: "#CCDADB" },
     { name: "StoneHouse", hex: "#C5C6B6" },
     { name: "SeaStone", hex: "#E2E0D7" },
   ],
@@ -224,6 +216,7 @@ const organizedColors = {
     { name: "Della Moda", hex: "#C6D1B2" },
     { name: "Fern II", hex: "#9FAF7B" },
     { name: "Fern", hex: "#6B7F7B" },
+    { name: "Unicorn", hex: "#94A8A5" },
     { name: "Unicorn II", hex: "#658E82" },
     { name: "Limpet", hex: "#D9F3E5" },
   ],
@@ -244,6 +237,7 @@ const organizedColors = {
     { name: "New Teal", hex: "#3AA0A0" },
     { name: "Transmute", hex: "#295250" },
     { name: "Blueprint", hex: "#C4E4E8" },
+    { name: "Bicycle", hex: "#E0ECED" },
     { name: "Bonnet", hex: "#E0F7FA" },
     { name: "Vespa", hex: "#CADBDA" },
     { name: "Porpoise", hex: "#C5D8D6" },
@@ -252,6 +246,8 @@ const organizedColors = {
     { name: "CandyFloss", hex: "#C1E0E0" },
     { name: "Caladon", hex: "#DAE8E8" },
     { name: "Riverstone", hex: "#CCDADB" },
+    { name: "a la Mode", hex: "#E6EEEF" },
+    { name: "New Shark", hex: "#829D9E" },
     { name: "Narwal II", hex: "#2E7E82" },
     { name: "Narwal III", hex: "#2B7F8C" },
     { name: "Narwal IV", hex: "#225F6E" },
@@ -286,108 +282,100 @@ const organizedColors = {
 };
 
 
-// Existing code starts here
 document.addEventListener('DOMContentLoaded', () => {
-    const colorGrid = document.getElementById('colorGrid');
-  
-    // Function to convert hex to HSL
-    function hexToHSL(hex) {
-        hex = hex.replace('#', '');
-        let r = parseInt(hex.substring(0,2), 16) / 255;
-        let g = parseInt(hex.substring(2,4), 16) / 255;
-        let b = parseInt(hex.substring(4,6), 16) / 255;
-        
-        let max = Math.max(r, g, b);
-        let min = Math.min(r, g, b);
-        let h, s, l = (max + min) / 2;
+  const colorGrid = document.getElementById('colorGrid');
 
-        if (max === min) {
-            h = s = 0;
-        } else {
-            let d = max - min;
-            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-            switch (max) {
-                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-                case g: h = (b - r) / d + 2; break;
-                case b: h = (r - g) / d + 4; break;
-            }
-            h /= 6;
-        }
+  // Function to convert hex to HSL
+  function hexToHSL(hex) {
+      hex = hex.replace('#', '');
+      const r = parseInt(hex.substring(0, 2), 16) / 255;
+      const g = parseInt(hex.substring(2, 4), 16) / 255;
+      const b = parseInt(hex.substring(4, 6), 16) / 255;
+      
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      let h, s, l = (max + min) / 2;
 
-        return {
-            h: Math.round(h * 360),
-            s: Math.round(s * 100),
-            l: Math.round(l * 100)
-        };
-    }
+      if (max === min) {
+          h = s = 0;
+      } else {
+          const d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+          switch (max) {
+              case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+              case g: h = (b - r) / d + 2; break;
+              case b: h = (r - g) / d + 4; break;
+          }
+          h /= 6;
+      }
 
-    // Function to convert hex to RGB
-    function hexToRGB(hex) {
-        hex = hex.replace('#', '');
-        let r = parseInt(hex.substring(0,2), 16);
-        let g = parseInt(hex.substring(2,4), 16);
-        let b = parseInt(hex.substring(4,6), 16);
-        return `rgb(${r}, ${g}, ${b})`;
-    }
+      return {
+          h: Math.round(h * 360),
+          s: Math.round(s * 100),
+          l: Math.round(l * 100)
+      };
+  }
 
-    // Loop over categories in organizedColors
-    for (const category in organizedColors) {
-        if (organizedColors.hasOwnProperty(category)) {
-            // Create a category heading
-            const categoryHeading = document.createElement('h2');
-            categoryHeading.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-            categoryHeading.className = 'category-heading';
-            colorGrid.appendChild(categoryHeading);
+  // Function to convert hex to RGB
+  function hexToRGB(hex) {
+      hex = hex.replace('#', '');
+      const r = parseInt(hex.substring(0, 2), 16);
+      const g = parseInt(hex.substring(2, 4), 16);
+      const b = parseInt(hex.substring(4, 6), 16);
+      return `rgb(${r}, ${g}, ${b})`;
+  }
 
-            // Create a container for the colors in this category
-            const categoryContainer = document.createElement('div');
-            categoryContainer.className = 'category-container';
-            colorGrid.appendChild(categoryContainer);
+  // Render colors by category
+  for (const category in organizedColors) {
+      if (organizedColors.hasOwnProperty(category)) {
+          // Create collapsible details element
+          const detailsElement = document.createElement('details');
+          const summaryElement = document.createElement('summary');
+          summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+          detailsElement.appendChild(summaryElement);
+          detailsElement.classList.add('category-heading');
 
-            // Loop over colors in this category
-            organizedColors[category].forEach(color => {
-                const hsl = hexToHSL(color.hex);
-                const rgb = hexToRGB(color.hex);
+          const categoryContainer = document.createElement('div');
+          categoryContainer.className = 'category-container';
 
-                const colorCard = document.createElement('div');
-                colorCard.className = 'color-card';
-                colorCard.innerHTML = `
-                    <div class="color-display" style="background-color: ${color.hex}" 
-                         data-hex="${color.hex}">
-                    </div>
-                    <div class="color-info">
-                        <h3 class="color-name">${color.name}</h3>
-                        <div class="color-values">
-                            <div class="color-value">
-                                ${color.hex}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                categoryContainer.appendChild(colorCard);
-            });
-        }
-    }
+          // Loop over colors in this category
+          organizedColors[category].forEach(color => {
+              const colorCard = document.createElement('div');
+              colorCard.className = 'color-card';
+              colorCard.innerHTML = `
+                  <div class="color-display" style="background-color: ${color.hex}" data-hex="${color.hex}"></div>
+                  <div class="color-info">
+                      <h3 class="color-name">${color.name}</h3>
+                      <div class="color-value">${color.hex}</div>
+                  </div>
+              `;
+              categoryContainer.appendChild(colorCard);
+          });
 
-    // Add click-to-copy functionality
-    document.addEventListener('click', function(e) {
-        if (e.target && e.target.classList.contains('color-display')) {
-            const hex = e.target.dataset.hex;
-            navigator.clipboard.writeText(hex).then(() => {
-                const notification = document.createElement('div');
-                notification.className = 'copied-notification';
-                notification.textContent = `Copied ${hex}`;
-                document.body.appendChild(notification);
-                
-                // Show notification
-                notification.style.display = 'block';
-                
-                // Remove notification after 2 seconds
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                    notification.remove();
-                }, 2000);
-            });
-        }
-    });
+          // Append container to details
+          detailsElement.appendChild(categoryContainer);
+          colorGrid.appendChild(detailsElement);
+      }
+  }
+
+  // Add click-to-copy functionality
+  document.addEventListener('click', function(e) {
+      if (e.target && e.target.classList.contains('color-display')) {
+          const hex = e.target.dataset.hex;
+          navigator.clipboard.writeText(hex).then(() => {
+              const notification = document.createElement('div');
+              notification.className = 'copied-notification';
+              notification.textContent = `Copied ${hex}`;
+              document.body.appendChild(notification);
+
+              // Show and remove notification
+              notification.style.display = 'block';
+              setTimeout(() => {
+                  notification.style.display = 'none';
+                  notification.remove();
+              }, 2000);
+          });
+      }
+  });
 });
+
