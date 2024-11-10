@@ -113,13 +113,12 @@ const organizedColors = {
     { name: "Osaka", hex: "#F20C3E" },
     { name: "Tuscany", hex: "#890E0E" },
     { name: "Fuscia", hex: "#D12466" },
-    
+    { name: "Gold Coast", hex: "#E0431E" },
+    { name: "Melborne", hex: "#BA5109" },
     { name: "Valentine I", hex: "#B94000" },
   ],
   oranges: [
     { name: "JackLantern", hex: "#ED6407" },
-    { name: "Gold Coast", hex: "#E0431E" },
-    { name: "Melborne", hex: "#BA5109" },
     { name: "Neroli", hex: "#D69421" },
     { name: "Neroli II", hex: "#DB8C2D" },
     { name: "Nectarine", hex: "#B76C00" },
@@ -127,11 +126,9 @@ const organizedColors = {
     { name: "Oriole", hex: "#D36922" },
     { name: "Mandarin", hex: "#EF8A11" },
     { name: "Citrouille", hex: "#F49B0C" },
-    { name: "Temple", hex: "#ECB235" },
     { name: "Marmalade", hex: "#D09F3C" },
     { name: "Apricot", hex: "#BC8A1B" },
     { name: "Gumdrop", hex: "#FEB637" },
-    { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   yellows: [
     { name: "Buttercup", hex: "#EBC81A" },
@@ -144,6 +141,8 @@ const organizedColors = {
     { name: "Beurre Blanc", hex: "#FCE883" },
     { name: "Sphinx", hex: "#C69A0C" },
     { name: "Cowboy", hex: "#BCAA08" },
+    { name: "Temple", hex: "#ECB235" },
+    { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
     { name: "Treebark", hex: "#515105" },
@@ -215,7 +214,6 @@ const organizedColors = {
     { name: "Jumper", hex: "#4F8FBA" },
     { name: "Pond", hex: "#185451" },
     { name: "Magician", hex: "#14467A" },
-    { name: "Corporate", hex: "#4A4882" },
     { name: "Credit Neutral", hex: "#AAB7C4" },
     { name: "Nimbus", hex: "#7E8D9B" },
     { name: "Nimbus II", hex: "#637482" },
@@ -266,6 +264,7 @@ const organizedColors = {
     { name: "Grape Soda", hex: "#7458DB" },
     { name: "Tokyo", hex: "#A0139D" },
     { name: "Spellbook", hex: "#A359D8" },
+    { name: "Corporate", hex: "#4A4882" },
   ],
   FleshTones: [
     { name: "Lucian I", hex: "#EDC696" },
