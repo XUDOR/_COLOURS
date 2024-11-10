@@ -59,6 +59,18 @@ body.dark-mode {
   color: #fff;
 }
 
+/* Toggle button border colors */
+#bodyToggle, #textToggle {
+  border: 3px solid lightblue; /* Default: Off */
+  transition: border-color 0.3s;
+}
+
+#bodyToggle.active, #textToggle.active {
+  border-color: olive; /* On */
+}
+
+
+
 
 /* Container styles */
 .container {

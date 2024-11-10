@@ -277,10 +277,23 @@ const organizedColors = {
     { name: "Unicorn", hex: "#EADDCA" },
   ],
 };
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const colorGrid = document.getElementById('colorGrid');
+  const titleElement = document.querySelector('.title'); // Define the title element
   let displayFormat = 'hex'; // Default format
   let applyToBody = false; // Boolean to track "Body" toggle state
+  let applyToText = false; // Boolean to track "Text" toggle state
+  const defaultBackgroundColor = '#f9f9f9'; // Default background color
+  const defaultTextColor = '#333'; // Default text color
+
+  // Function to log toggle states for visibility
+  function logToggleStates() {
+    console.log(`Body toggle is ${applyToBody ? 'ON' : 'OFF'}`);
+    console.log(`Text toggle is ${applyToText ? 'ON' : 'OFF'}`);
+  }
 
   // Dark mode toggle
   document.getElementById('darkModeToggle').addEventListener('click', () => {
@@ -291,25 +304,55 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('bodyToggle').addEventListener('click', () => {
     applyToBody = !applyToBody;
     document.getElementById('bodyToggle').classList.toggle('active', applyToBody);
+    document.getElementById('bodyToggle').style.borderColor = applyToBody ? 'olive' : 'lightblue';
+    logToggleStates(); // Log toggle states
   });
 
-  // Function to copy hex value to clipboard input and optionally update background
+  // Text toggle to control text color update behavior
+  document.getElementById('textToggle').addEventListener('click', () => {
+    applyToText = !applyToText;
+    document.getElementById('textToggle').classList.toggle('active', applyToText);
+    document.getElementById('textToggle').style.borderColor = applyToText ? 'olive' : 'lightblue';
+    logToggleStates(); // Log toggle states
+  });
+
+  // Reset button to return to default background and text colors
+  document.getElementById('resetButton').addEventListener('click', () => {
+    document.body.style.backgroundColor = defaultBackgroundColor;
+    titleElement.style.color = defaultTextColor; // Reset title color
+    document.body.style.color = defaultTextColor; // Reset body text color
+    console.log('Background and text colors reset to default.');
+  });
+
+  // Function to handle copying of the hex value and updating background/text colors independently
   function copyToClipboardInput(hex) {
     const clipboardInput = document.getElementById('clipboardInput');
     clipboardInput.value = hex;
     navigator.clipboard.writeText(hex); // Copy to clipboard
 
-    // Update background only if "Body" toggle is active
+    // Update background color if "Body" toggle is active
     if (applyToBody) {
-        document.body.style.backgroundColor = hex;
+      document.body.style.backgroundColor = hex;
+    }
+
+    // Update text color if "Text" toggle is active
+    if (applyToText) {
+      titleElement.style.color = hex;
+      document.body.style.color = hex;
     }
   }
 
   // Event listener for clipboard input changes (manual updates)
   document.getElementById('clipboardInput').addEventListener('input', (event) => {
     const hex = event.target.value;
+    // Update background if "Body" toggle is active
     if (applyToBody) {
-        document.body.style.backgroundColor = hex;
+      document.body.style.backgroundColor = hex;
+    }
+    // Update text color if "Text" toggle is active
+    if (applyToText) {
+      titleElement.style.color = hex;
+      document.body.style.color = hex;
     }
   });
 
@@ -411,12 +454,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const colorCard = document.createElement('div');
         colorCard.className = 'color-card';
         colorCard.innerHTML = `
-                  <div class="color-display" style="background-color: ${color.hex}" data-hex="${color.hex}"></div>
-                  <div class="color-info">
-                      <h3 class="color-name">${color.name}</h3>
-                      <div class="color-value">${color.hex}</div>
-                  </div>
-              `;
+          <div class="color-display" style="background-color: ${color.hex}" data-hex="${color.hex}"></div>
+          <div class="color-info">
+            <h3 class="color-name">${color.name}</h3>
+            <div class="color-value">${color.hex}</div>
+          </div>
+        `;
         categoryContainer.appendChild(colorCard);
       });
 
@@ -425,11 +468,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Click-to-copy functionality
+  // Click-to-copy functionality that uses copyToClipboardInput
   document.addEventListener('click', function (e) {
     if (e.target && e.target.classList.contains('color-display')) {
       const hex = e.target.dataset.hex;
-      copyToClipboardInput(hex); // Set clipboard input value
+      copyToClipboardInput(hex); // Call the function to handle clipboard and color updates
       const notification = document.createElement('div');
       notification.className = 'copied-notification';
       notification.textContent = `Copied ${hex}`;
@@ -443,4 +486,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
