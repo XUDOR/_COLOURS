@@ -26,7 +26,6 @@ const organizedColors = {
     { name: "New Chartreuse", hex: "#F7FDE1" },
     { name: "Lotus", hex: "#E2DFC7" },
     { name: "Milan Suit", hex: "#D3CFBA" },
-    
     { name: "1000 TC Linen", hex: "#EFE7C5" },
     { name: "Fromage de Meaux", hex: "#EFEAAB" },
     { name: "Old Bone", hex: "#E8E8CA" },
