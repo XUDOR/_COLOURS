@@ -286,13 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let displayFormat = 'hex'; // Default format
   let applyToBody = false; // Boolean to track "Body" toggle state
   let applyToText = false; // Boolean to track "Text" toggle state
+  let applyToCard = false; // Boolean to track "Card" toggle state
   const defaultBackgroundColor = '#f9f9f9'; // Default background color
   const defaultTextColor = '#333'; // Default text color
+  const defaultCardColor = '#fff'; // Default color-card background color
 
   // Function to log toggle states for visibility
   function logToggleStates() {
     console.log(`Body toggle is ${applyToBody ? 'ON' : 'OFF'}`);
     console.log(`Text toggle is ${applyToText ? 'ON' : 'OFF'}`);
+    console.log(`Card toggle is ${applyToCard ? 'ON' : 'OFF'}`); // Update: Added log for "Card" toggle state
   }
 
   // Dark mode toggle
@@ -316,7 +319,15 @@ document.addEventListener('DOMContentLoaded', () => {
     logToggleStates(); // Log toggle states
   });
 
-  // Reset button to return to default background and text colors
+  // Card toggle to control color-card background update behavior
+  document.getElementById('cardToggle').addEventListener('click', () => {
+    applyToCard = !applyToCard;
+    document.getElementById('cardToggle').classList.toggle('active', applyToCard);
+    document.getElementById('cardToggle').style.borderColor = applyToCard ? 'olive' : 'lightblue';
+    logToggleStates(); // Log toggle states
+  });
+
+  // Reset button to return to default background, text, and color-card colors
   document.getElementById('resetButton').addEventListener('click', () => {
     document.body.style.backgroundColor = defaultBackgroundColor;
     titleElement.style.color = defaultTextColor; // Reset title color
@@ -326,10 +337,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.category-heading summary').forEach(heading => {
       heading.style.color = defaultTextColor;
     });
-    console.log('Background, title, and category heading colors reset to default.');
+
+    // Reset all color-card background colors to default
+    document.querySelectorAll('.color-card').forEach(card => {
+      card.style.backgroundColor = defaultCardColor;
+    });
+
+    console.log('Background, title, category heading, and color-card colors reset to default.');
   });
 
-  // Function to handle copying of the hex value and updating background/text colors independently
+  // Function to handle copying of the hex value and updating background, text, and color-card colors independently
   function copyToClipboardInput(hex) {
     const clipboardInput = document.getElementById('clipboardInput');
     clipboardInput.value = hex;
@@ -347,6 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update category heading text color
       document.querySelectorAll('.category-heading summary').forEach(heading => {
         heading.style.color = hex;
+      });
+    }
+
+    // Update color-card background color if "Card" toggle is active
+    if (applyToCard) {
+      document.querySelectorAll('.color-card').forEach(card => {
+        card.style.backgroundColor = hex;
       });
     }
   }
@@ -367,46 +391,52 @@ document.addEventListener('DOMContentLoaded', () => {
         heading.style.color = hex;
       });
     }
+    // Update color-card background color if "Card" toggle is active
+    if (applyToCard) {
+      document.querySelectorAll('.color-card').forEach(card => {
+        card.style.backgroundColor = hex;
+      });
+    }
   });
 
   // Function to convert hex to HSL
   function hexToHSL(hex) {
     hex = hex.replace('#', '');
-    const r = parseInt(hex.substring(0, 2), 16) / 255;
-    const g = parseInt(hex.substring(2, 4), 16) / 255;
-    const b = parseInt(hex.substring(4, 6), 16) / 255;
+    const red = parseInt(hex.substring(0, 2), 16) / 255;
+    const green = parseInt(hex.substring(2, 4), 16) / 255;
+    const blue = parseInt(hex.substring(4, 6), 16) / 255;
 
-    const max = Math.max(r, g, b);
-    const min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
+    const max = Math.max(red, green, blue);
+    const min = Math.min(red, green, blue);
+    let hue, saturation, lightness = (max + min) / 2;
 
     if (max === min) {
-      h = s = 0;
+      hue = saturation = 0;
     } else {
-      const d = max - min;
-      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      const delta = max - min;
+      saturation = lightness > 0.5 ? delta / (2 - max - min) : delta / (max + min);
       switch (max) {
-        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-        case g: h = (b - r) / d + 2; break;
-        case b: h = (r - g) / d + 4; break;
+        case red: hue = (green - blue) / delta + (green < blue ? 6 : 0); break;
+        case green: hue = (blue - red) / delta + 2; break;
+        case blue: hue = (red - green) / delta + 4; break;
       }
-      h /= 6;
+      hue /= 6;
     }
 
     return {
-      h: Math.round(h * 360),
-      s: Math.round(s * 100),
-      l: Math.round(l * 100)
+      h: Math.round(hue * 360),
+      s: Math.round(saturation * 100),
+      l: Math.round(lightness * 100)
     };
   }
 
   // Function to convert hex to RGB
   function hexToRGB(hex) {
     hex = hex.replace('#', '');
-    const r = parseInt(hex.substring(0, 2), 16);
-    const g = parseInt(hex.substring(2, 4), 16);
-    const b = parseInt(hex.substring(4, 6), 16);
-    return `rgb(${r}, ${g}, ${b})`;
+    const red = parseInt(hex.substring(0, 2), 16);
+    const green = parseInt(hex.substring(2, 4), 16);
+    const blue = parseInt(hex.substring(4, 6), 16);
+    return `rgb(${red}, ${green}, ${blue})`;
   }
 
   // Function to update display format for color values
@@ -482,9 +512,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Click-to-copy functionality that uses copyToClipboardInput
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.classList.contains('color-display')) {
-      const hex = e.target.dataset.hex;
+  document.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('color-display')) {
+      const hex = event.target.dataset.hex;
       copyToClipboardInput(hex); // Call the function to handle clipboard and color updates
       const notification = document.createElement('div');
       notification.className = 'copied-notification';
@@ -499,6 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
 
