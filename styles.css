@@ -60,12 +60,12 @@ body.dark-mode {
 }
 
 /* Toggle button border colors */
-#bodyToggle, #textToggle {
+#bodyToggle, #textToggle, #cardToggle {
   border: 3px solid lightblue; /* Default: Off */
   transition: border-color 0.3s;
 }
 
-#bodyToggle.active, #textToggle.active {
+#bodyToggle.active, #textToggle.active, #cardToggle.active {
   border-color: olive; /* On */
 }
 
