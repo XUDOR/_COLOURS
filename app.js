@@ -319,23 +319,23 @@ document.addEventListener('DOMContentLoaded', () => {
     logToggleStates();
   });
 
-// Card toggle to control color-card background update behavior
-document.getElementById('cardToggle').addEventListener('click', () => {
-  applyToCard = !applyToCard;
-  const cardToggleButton = document.getElementById('cardToggle');
-  cardToggleButton.classList.toggle('active', applyToCard);
-  
-  // Set the border color based on the toggle state
-  if (applyToCard) {
+  // Card toggle to control color-card background update behavior
+  document.getElementById('cardToggle').addEventListener('click', () => {
+    applyToCard = !applyToCard;
+    const cardToggleButton = document.getElementById('cardToggle');
+    cardToggleButton.classList.toggle('active', applyToCard);
+
+    // Set the border color based on the toggle state
+    if (applyToCard) {
       cardToggleButton.style.borderColor = 'olive';
       console.log("Card toggle is ON");
-  } else {
+    } else {
       cardToggleButton.style.borderColor = 'lightblue';
       console.log("Card toggle is OFF");
-  }
-  
-  logToggleStates(); // Log all toggle states
-});
+    }
+
+    logToggleStates(); // Log all toggle states
+  });
 
 
   // Reset button to return to default background, text, and color-card colors
@@ -357,22 +357,72 @@ document.getElementById('cardToggle').addEventListener('click', () => {
     console.log('Background, title, category heading, and color-card colors reset to default.');
   });
 
+
+  // Helper function to convert RGB to HEX
+function rgbToHex(rgb) {
+  const rgbValues = rgb.match(/\d+/g);
+  if (!rgbValues) return rgb; // If not in RGB format, return the original value
+  return `#${rgbValues.map(x => {
+    const hex = parseInt(x).toString(16);
+    return hex.length === 1 ? '0' + hex : hex;
+  }).join('')}`;
+}
+
+document.getElementById('jsonButton').addEventListener('click', () => {
+  // Get the current hex values for body, text, and the first color-card element
+  const bodyColor = rgbToHex(document.body.style.backgroundColor || '#f9f9f9');
+  const textColor = rgbToHex(document.body.style.color || '#333');
+  
+  // Capture the hex value of only the first color-card
+  const firstCard = document.querySelector('.color-card');
+  const cardColor = firstCard ? rgbToHex(firstCard.style.backgroundColor || '#fff') : '#fff';
+
+  // Create an object with the color data
+  const colorSnapshot = {
+    bodyColor: bodyColor,
+    textColor: textColor,
+    cardColor: cardColor // Store only the first card's color in hex
+  };
+
+  // Convert the object to a JSON string
+  const jsonContent = JSON.stringify(colorSnapshot, null, 2);
+
+  // Create a Blob from the JSON string and create a downloadable link
+  const blob = new Blob([jsonContent], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'color-palette-snapshot.json';
+
+  // Programmatically click the link to trigger the download
+  document.body.appendChild(link);
+  link.click();
+
+  // Clean up by removing the link and revoking the URL
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+
+  console.log('Downloaded color palette snapshot as JSON');
+});
+
+
+
   // Function to handle copying of the hex value and updating background, text, and color-card colors independently
   function copyToClipboardInput(hex) {
     const clipboardInput = document.getElementById('clipboardInput');
     clipboardInput.value = hex;
-  
+
     navigator.clipboard.writeText(hex).then(() => {
       console.log(`Copied ${hex} to clipboard`);
     }).catch(err => {
       console.error('Could not copy text: ', err);
     });
-  
+
     // Update background color if "Body" toggle is active
     if (applyToBody) {
       document.body.style.backgroundColor = hex;
     }
-  
+
     // Update text color if "Text" toggle is active
     if (applyToText) {
       titleElement.style.color = hex;
@@ -381,7 +431,7 @@ document.getElementById('cardToggle').addEventListener('click', () => {
         heading.style.color = hex;
       });
     }
-  
+
     // Update color-card background color if "Card" toggle is active
     if (applyToCard) {
       document.querySelectorAll('.color-card').forEach(card => {
@@ -389,7 +439,7 @@ document.getElementById('cardToggle').addEventListener('click', () => {
       });
     }
   }
-  
+
 
   // Event listener for clipboard input changes (manual updates)
   document.getElementById('clipboardInput').addEventListener('input', (event) => {
