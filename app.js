@@ -361,23 +361,27 @@ document.getElementById('cardToggle').addEventListener('click', () => {
   function copyToClipboardInput(hex) {
     const clipboardInput = document.getElementById('clipboardInput');
     clipboardInput.value = hex;
-    navigator.clipboard.writeText(hex); // Copy to clipboard
-
+  
+    navigator.clipboard.writeText(hex).then(() => {
+      console.log(`Copied ${hex} to clipboard`);
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  
     // Update background color if "Body" toggle is active
     if (applyToBody) {
       document.body.style.backgroundColor = hex;
     }
-
+  
     // Update text color if "Text" toggle is active
     if (applyToText) {
       titleElement.style.color = hex;
       document.body.style.color = hex;
-      // Update category heading text color
       document.querySelectorAll('.category-heading summary').forEach(heading => {
         heading.style.color = hex;
       });
     }
-
+  
     // Update color-card background color if "Card" toggle is active
     if (applyToCard) {
       document.querySelectorAll('.color-card').forEach(card => {
@@ -385,6 +389,7 @@ document.getElementById('cardToggle').addEventListener('click', () => {
       });
     }
   }
+  
 
   // Event listener for clipboard input changes (manual updates)
   document.getElementById('clipboardInput').addEventListener('input', (event) => {
