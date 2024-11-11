@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function logToggleStates() {
     console.log(`Body toggle is ${applyToBody ? 'ON' : 'OFF'}`);
     console.log(`Text toggle is ${applyToText ? 'ON' : 'OFF'}`);
-    console.log(`Card toggle is ${applyToCard ? 'ON' : 'OFF'}`); // Update: Added log for "Card" toggle state
+    console.log(`Card toggle is ${applyToCard ? 'ON' : 'OFF'}`);
   }
 
   // Dark mode toggle
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyToBody = !applyToBody;
     document.getElementById('bodyToggle').classList.toggle('active', applyToBody);
     document.getElementById('bodyToggle').style.borderColor = applyToBody ? 'olive' : 'lightblue';
-    logToggleStates(); // Log toggle states
+    logToggleStates();
   });
 
   // Text toggle to control text color update behavior
@@ -316,16 +316,27 @@ document.addEventListener('DOMContentLoaded', () => {
     applyToText = !applyToText;
     document.getElementById('textToggle').classList.toggle('active', applyToText);
     document.getElementById('textToggle').style.borderColor = applyToText ? 'olive' : 'lightblue';
-    logToggleStates(); // Log toggle states
+    logToggleStates();
   });
 
-  // Card toggle to control color-card background update behavior
-  document.getElementById('cardToggle').addEventListener('click', () => {
-    applyToCard = !applyToCard;
-    document.getElementById('cardToggle').classList.toggle('active', applyToCard);
-    document.getElementById('cardToggle').style.borderColor = applyToCard ? 'olive' : 'lightblue';
-    logToggleStates(); // Log toggle states
-  });
+// Card toggle to control color-card background update behavior
+document.getElementById('cardToggle').addEventListener('click', () => {
+  applyToCard = !applyToCard;
+  const cardToggleButton = document.getElementById('cardToggle');
+  cardToggleButton.classList.toggle('active', applyToCard);
+  
+  // Set the border color based on the toggle state
+  if (applyToCard) {
+      cardToggleButton.style.borderColor = 'olive';
+      console.log("Card toggle is ON");
+  } else {
+      cardToggleButton.style.borderColor = 'lightblue';
+      console.log("Card toggle is OFF");
+  }
+  
+  logToggleStates(); // Log all toggle states
+});
+
 
   // Reset button to return to default background, text, and color-card colors
   document.getElementById('resetButton').addEventListener('click', () => {
@@ -529,6 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
 
