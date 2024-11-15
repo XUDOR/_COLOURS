@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.addEventListener('click', () => {
       swatch.apply = !swatch.apply;
       toggleButton.classList.toggle('active', swatch.apply);
-      toggleButton.style.borderColor = swatch.apply ? 'olive' : 'lightblue';
+      toggleButton.style.borderColor = swatch.apply ? 'black' : 'grey';
       swatchElement.classList.toggle('active', swatch.apply);
       logToggleStates();
     });

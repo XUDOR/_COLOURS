@@ -74,12 +74,33 @@ body.dark-mode {
 
 
 /* Toggle button border colors */
-#bodyToggle, #textToggle, #cardToggle {
+#bodyToggle, 
+#textToggle, 
+#cardToggle,
+#swatch1Toggle1,
+#swatch1Toggle2,
+#swatch1Toggle3,
+#swatch1Toggle4,
+#swatch1Toggle5
+
+{
   border: 3px solid lightblue; /* Default: Off */
   transition: border-color 0.3s;
 }
 
-#bodyToggle.active, #textToggle.active, #cardToggle.active {
+
+
+#bodyToggle.active, 
+#textToggle.active, 
+#cardToggle.active
+#swatch1Toggle1.active,
+#swatch1Toggle2.active,
+#swatch1Toggle3.active,
+#swatch1Toggle4.active,
+#swatch1Toggle5.active 
+
+
+{
   border-color: olive; /* On */
 }
 
