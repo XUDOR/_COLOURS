@@ -324,24 +324,38 @@ const organizedColors = {
   ],
 };
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const colorGrid = document.getElementById('colorGrid');
-  const titleElement = document.querySelector('.title'); // Define the title element
+  const titleElement = document.querySelector('.title');
   let displayFormat = 'hex'; // Default format
-  let applyToBody = false; // Boolean to track "Body" toggle state
-  let applyToText = false; // Boolean to track "Text" toggle state
-  let applyToCard = false; // Boolean to track "Card" toggle state
-  const defaultBackgroundColor = '#f9f9f9'; // Default background color
-  const defaultTextColor = '#333'; // Default text color
-  const defaultCardColor = '#fff'; // Default color-card background color
 
-  // Function to log toggle states for visibility
+  // Toggle states
+  let applyToBody = false;
+  let applyToText = false;
+  let applyToCard = false;
+
+  // Default colors
+  const defaultBackgroundColor = '#f9f9f9';
+  const defaultTextColor = '#333';
+  const defaultCardColor = '#fff';
+
+  // Swatch state variables
+  const swatches = [
+    { id: 'swatch1', toggleId: 'swatch1Toggle', apply: false },
+    { id: 'swatch2', toggleId: 'swatch2Toggle', apply: false },
+    { id: 'swatch3', toggleId: 'swatch3Toggle', apply: false },
+    { id: 'swatch4', toggleId: 'swatch4Toggle', apply: false },
+    { id: 'swatch5', toggleId: 'swatch5Toggle', apply: false },
+  ];
+
+  // Function to log toggle states for debugging
   function logToggleStates() {
     console.log(`Body toggle is ${applyToBody ? 'ON' : 'OFF'}`);
     console.log(`Text toggle is ${applyToText ? 'ON' : 'OFF'}`);
     console.log(`Card toggle is ${applyToCard ? 'ON' : 'OFF'}`);
+    swatches.forEach((swatch, index) => {
+      console.log(`Swatch ${index + 1} toggle is ${swatch.apply ? 'ON' : 'OFF'}`);
+    });
   }
 
   // Dark mode toggle
@@ -349,169 +363,206 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('dark-mode');
   });
 
-  // Body toggle to control background update behavior
+  // Body toggle
   document.getElementById('bodyToggle').addEventListener('click', () => {
     applyToBody = !applyToBody;
-    document.getElementById('bodyToggle').classList.toggle('active', applyToBody);
-    document.getElementById('bodyToggle').style.borderColor = applyToBody ? 'olive' : 'lightblue';
+    const button = document.getElementById('bodyToggle');
+    button.classList.toggle('active', applyToBody);
+    button.style.borderColor = applyToBody ? 'olive' : 'lightblue';
     logToggleStates();
   });
 
-  // Text toggle to control text color update behavior
+  // Text toggle
   document.getElementById('textToggle').addEventListener('click', () => {
     applyToText = !applyToText;
-    document.getElementById('textToggle').classList.toggle('active', applyToText);
-    document.getElementById('textToggle').style.borderColor = applyToText ? 'olive' : 'lightblue';
+    const button = document.getElementById('textToggle');
+    button.classList.toggle('active', applyToText);
+    button.style.borderColor = applyToText ? 'olive' : 'lightblue';
     logToggleStates();
   });
 
-  // Card toggle to control color-card background update behavior
+  // Card toggle
   document.getElementById('cardToggle').addEventListener('click', () => {
     applyToCard = !applyToCard;
-    const cardToggleButton = document.getElementById('cardToggle');
-    cardToggleButton.classList.toggle('active', applyToCard);
-
-    // Set the border color based on the toggle state
-    if (applyToCard) {
-      cardToggleButton.style.borderColor = 'olive';
-      console.log("Card toggle is ON");
-    } else {
-      cardToggleButton.style.borderColor = 'lightblue';
-      console.log("Card toggle is OFF");
-    }
-
-    logToggleStates(); // Log all toggle states
+    const button = document.getElementById('cardToggle');
+    button.classList.toggle('active', applyToCard);
+    button.style.borderColor = applyToCard ? 'olive' : 'lightblue';
+    logToggleStates();
   });
 
+  // Swatch toggles
+  swatches.forEach((swatch) => {
+    const toggleButton = document.getElementById(swatch.toggleId);
+    const swatchElement = document.getElementById(swatch.id);
 
-  // Reset button to return to default background, text, and color-card colors
+    toggleButton.addEventListener('click', () => {
+      swatch.apply = !swatch.apply;
+      toggleButton.classList.toggle('active', swatch.apply);
+      toggleButton.style.borderColor = swatch.apply ? 'olive' : 'lightblue';
+      swatchElement.classList.toggle('active', swatch.apply);
+      logToggleStates();
+    });
+  });
+
+  // Reset button
   document.getElementById('resetButton').addEventListener('click', () => {
+    // Reset body background color
     document.body.style.backgroundColor = defaultBackgroundColor;
-    titleElement.style.color = defaultTextColor; // Reset title color
-    document.body.style.color = defaultTextColor; // Reset body text color
 
-    // Reset category heading text color to default
-    document.querySelectorAll('.category-heading summary').forEach(heading => {
+    // Reset text color
+    titleElement.style.color = defaultTextColor;
+    document.body.style.color = defaultTextColor;
+
+    // Reset category headings
+    document.querySelectorAll('.category-heading summary').forEach((heading) => {
       heading.style.color = defaultTextColor;
     });
 
-    // Reset all color-card background colors to default
-    document.querySelectorAll('.color-card').forEach(card => {
+    // Reset color cards
+    document.querySelectorAll('.color-card').forEach((card) => {
       card.style.backgroundColor = defaultCardColor;
     });
 
-    console.log('Background, title, category heading, and color-card colors reset to default.');
+    // Reset swatches
+    swatches.forEach((swatch) => {
+      const swatchElement = document.getElementById(swatch.id);
+      swatchElement.style.backgroundColor = defaultCardColor;
+    });
+
+    console.log('Reset to default colors.');
   });
 
-
   // Helper function to convert RGB to HEX
-function rgbToHex(rgb) {
-  const rgbValues = rgb.match(/\d+/g);
-  if (!rgbValues) return rgb; // If not in RGB format, return the original value
-  return `#${rgbValues.map(x => {
-    const hex = parseInt(x).toString(16);
-    return hex.length === 1 ? '0' + hex : hex;
-  }).join('')}`;
-}
+  function rgbToHex(rgb) {
+    const rgbValues = rgb.match(/\d+/g);
+    if (!rgbValues) return rgb;
+    return `#${rgbValues
+      .map((x) => {
+        const hex = parseInt(x).toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+      })
+      .join('')}`;
+  }
 
-document.getElementById('jsonButton').addEventListener('click', () => {
-  // Get the current hex values for body, text, and the first color-card element
-  const bodyColor = rgbToHex(document.body.style.backgroundColor || '#f9f9f9');
-  const textColor = rgbToHex(document.body.style.color || '#333');
-  
-  // Capture the hex value of only the first color-card
-  const firstCard = document.querySelector('.color-card');
-  const cardColor = firstCard ? rgbToHex(firstCard.style.backgroundColor || '#fff') : '#fff';
+  // JSON download button
+  document.getElementById('jsonButton').addEventListener('click', () => {
+    const bodyColor = rgbToHex(document.body.style.backgroundColor || defaultBackgroundColor);
+    const textColor = rgbToHex(document.body.style.color || defaultTextColor);
+    const cardColor = rgbToHex(
+      document.querySelector('.color-card')?.style.backgroundColor || defaultCardColor
+    );
 
-  // Create an object with the color data
-  const colorSnapshot = {
-    bodyColor: bodyColor,
-    textColor: textColor,
-    cardColor: cardColor // Store only the first card's color in hex
-  };
+    // Get swatch colors
+    const swatchColors = {};
+    swatches.forEach((swatch) => {
+      const swatchElement = document.getElementById(swatch.id);
+      const swatchColor = rgbToHex(swatchElement.style.backgroundColor || defaultCardColor);
+      swatchColors[swatch.id] = swatchColor;
+    });
 
-  // Convert the object to a JSON string
-  const jsonContent = JSON.stringify(colorSnapshot, null, 2);
+    const colorSnapshot = {
+      bodyColor,
+      textColor,
+      cardColor,
+      swatchColors,
+    };
 
-  // Create a Blob from the JSON string and create a downloadable link
-  const blob = new Blob([jsonContent], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'color-palette-snapshot.json';
+    const jsonContent = JSON.stringify(colorSnapshot, null, 2);
 
-  // Programmatically click the link to trigger the download
-  document.body.appendChild(link);
-  link.click();
+    const blob = new Blob([jsonContent], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'color-palette-snapshot.json';
 
-  // Clean up by removing the link and revoking the URL
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
+    document.body.appendChild(link);
+    link.click();
 
-  console.log('Downloaded color palette snapshot as JSON');
-});
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
 
+    console.log('Downloaded color palette snapshot as JSON');
+  });
 
-
-  // Function to handle copying of the hex value and updating background, text, and color-card colors independently
+  // Copy to clipboard and update colors
   function copyToClipboardInput(hex) {
     const clipboardInput = document.getElementById('clipboardInput');
     clipboardInput.value = hex;
 
-    navigator.clipboard.writeText(hex).then(() => {
-      console.log(`Copied ${hex} to clipboard`);
-    }).catch(err => {
-      console.error('Could not copy text: ', err);
-    });
+    navigator.clipboard
+      .writeText(hex)
+      .then(() => {
+        console.log(`Copied ${hex} to clipboard`);
+      })
+      .catch((err) => {
+        console.error('Could not copy text: ', err);
+      });
 
-    // Update background color if "Body" toggle is active
+    // Update body background color
     if (applyToBody) {
       document.body.style.backgroundColor = hex;
     }
 
-    // Update text color if "Text" toggle is active
+    // Update text color
     if (applyToText) {
       titleElement.style.color = hex;
       document.body.style.color = hex;
-      document.querySelectorAll('.category-heading summary').forEach(heading => {
+      document.querySelectorAll('.category-heading summary').forEach((heading) => {
         heading.style.color = hex;
       });
     }
 
-    // Update color-card background color if "Card" toggle is active
+    // Update color cards
     if (applyToCard) {
-      document.querySelectorAll('.color-card').forEach(card => {
+      document.querySelectorAll('.color-card').forEach((card) => {
         card.style.backgroundColor = hex;
       });
     }
+
+    // Update swatches
+    swatches.forEach((swatch) => {
+      if (swatch.apply) {
+        const swatchElement = document.getElementById(swatch.id);
+        swatchElement.style.backgroundColor = hex;
+      }
+    });
   }
 
-
-  // Event listener for clipboard input changes (manual updates)
+  // Clipboard input change
   document.getElementById('clipboardInput').addEventListener('input', (event) => {
     const hex = event.target.value;
-    // Update background if "Body" toggle is active
+
+    // Update body background color
     if (applyToBody) {
       document.body.style.backgroundColor = hex;
     }
-    // Update text color if "Text" toggle is active
+
+    // Update text color
     if (applyToText) {
       titleElement.style.color = hex;
       document.body.style.color = hex;
-      // Update category heading text color
-      document.querySelectorAll('.category-heading summary').forEach(heading => {
+      document.querySelectorAll('.category-heading summary').forEach((heading) => {
         heading.style.color = hex;
       });
     }
-    // Update color-card background color if "Card" toggle is active
+
+    // Update color cards
     if (applyToCard) {
-      document.querySelectorAll('.color-card').forEach(card => {
+      document.querySelectorAll('.color-card').forEach((card) => {
         card.style.backgroundColor = hex;
       });
     }
+
+    // Update swatches
+    swatches.forEach((swatch) => {
+      if (swatch.apply) {
+        const swatchElement = document.getElementById(swatch.id);
+        swatchElement.style.backgroundColor = hex;
+      }
+    });
   });
 
-  // Function to convert hex to HSL
+  // Hex to HSL conversion
   function hexToHSL(hex) {
     hex = hex.replace('#', '');
     const red = parseInt(hex.substring(0, 2), 16) / 255;
@@ -528,9 +579,15 @@ document.getElementById('jsonButton').addEventListener('click', () => {
       const delta = max - min;
       saturation = lightness > 0.5 ? delta / (2 - max - min) : delta / (max + min);
       switch (max) {
-        case red: hue = (green - blue) / delta + (green < blue ? 6 : 0); break;
-        case green: hue = (blue - red) / delta + 2; break;
-        case blue: hue = (red - green) / delta + 4; break;
+        case red:
+          hue = (green - blue) / delta + (green < blue ? 6 : 0);
+          break;
+        case green:
+          hue = (blue - red) / delta + 2;
+          break;
+        case blue:
+          hue = (red - green) / delta + 4;
+          break;
       }
       hue /= 6;
     }
@@ -538,11 +595,11 @@ document.getElementById('jsonButton').addEventListener('click', () => {
     return {
       h: Math.round(hue * 360),
       s: Math.round(saturation * 100),
-      l: Math.round(lightness * 100)
+      l: Math.round(lightness * 100),
     };
   }
 
-  // Function to convert hex to RGB
+  // Hex to RGB conversion
   function hexToRGB(hex) {
     hex = hex.replace('#', '');
     const red = parseInt(hex.substring(0, 2), 16);
@@ -551,10 +608,10 @@ document.getElementById('jsonButton').addEventListener('click', () => {
     return `rgb(${red}, ${green}, ${blue})`;
   }
 
-  // Function to update display format for color values
+  // Update display format
   function updateDisplayFormat(format) {
     displayFormat = format;
-    document.querySelectorAll('.color-card').forEach(card => {
+    document.querySelectorAll('.color-card').forEach((card) => {
       const hex = card.querySelector('.color-display').dataset.hex;
       const valueElement = card.querySelector('.color-value');
 
@@ -573,10 +630,10 @@ document.getElementById('jsonButton').addEventListener('click', () => {
     });
   }
 
-  // Event listener for toggling display format
-  document.querySelectorAll('.toggle-nav button').forEach(button => {
+  // Format toggle buttons
+  document.querySelectorAll('.toggle-nav button[data-format]').forEach((button) => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('.toggle-nav button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.toggle-nav button').forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
       updateDisplayFormat(button.dataset.format);
     });
@@ -590,7 +647,8 @@ document.getElementById('jsonButton').addEventListener('click', () => {
       summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
 
       // Create a random color square for the category heading
-      const randomColor = organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
+      const randomColor =
+        organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
       const colorSquare = document.createElement('div');
       colorSquare.style.width = '40px';
       colorSquare.style.height = '40px';
@@ -605,7 +663,7 @@ document.getElementById('jsonButton').addEventListener('click', () => {
       const categoryContainer = document.createElement('div');
       categoryContainer.className = 'category-container';
 
-      organizedColors[category].forEach(color => {
+      organizedColors[category].forEach((color) => {
         const colorCard = document.createElement('div');
         colorCard.className = 'color-card';
         colorCard.innerHTML = `
@@ -623,11 +681,11 @@ document.getElementById('jsonButton').addEventListener('click', () => {
     }
   }
 
-  // Click-to-copy functionality that uses copyToClipboardInput
+  // Click-to-copy functionality
   document.addEventListener('click', function (event) {
     if (event.target && event.target.classList.contains('color-display')) {
       const hex = event.target.dataset.hex;
-      copyToClipboardInput(hex); // Call the function to handle clipboard and color updates
+      copyToClipboardInput(hex);
       const notification = document.createElement('div');
       notification.className = 'copied-notification';
       notification.textContent = `Copied ${hex}`;
@@ -641,8 +699,3 @@ document.getElementById('jsonButton').addEventListener('click', () => {
     }
   });
 });
-
-
-
-
-
