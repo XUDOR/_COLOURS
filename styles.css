@@ -102,12 +102,27 @@ body.dark-mode {
   border-bottom: 5px solid #fff;
 }
 
-.pallete {
-  border: 1px solid #ccc;
+
+/* Palette Card Styles */
+.palette {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
   justify-content: space-around;
+}
+
+.palette-card {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border: 2px solid lightblue;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.palette-card.active {
+  border-color: olive;
 }
 
 
