@@ -102,6 +102,15 @@ body.dark-mode {
   border-bottom: 5px solid #fff;
 }
 
+.pallete {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
 .color-grid {
   display: flex;
   flex-direction: column;
