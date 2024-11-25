@@ -306,6 +306,8 @@ const organizedColors = {
     { name: "Tokyo", hex: "#A0139D" },
     { name: "Spellbook", hex: "#A359D8" },
     { name: "Corporate", hex: "#4A4882" },
+    { name: "Joker", hex: "#AD6AC6" },
+
   ],
   FleshTones: [
     { name: "Blush", hex: "#E56161" },
