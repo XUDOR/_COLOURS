@@ -249,6 +249,7 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
+    { name: "Userblue", hex: "#2c3e50" },
     { name: "Darker Focus", hex: "#0F1D38" },
     { name: "Rosicrucian", hex: "#0F1D38" },
     { name: "DeepOcean", hex: "#0F1D38" },
