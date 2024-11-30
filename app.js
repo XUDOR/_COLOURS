@@ -3,6 +3,7 @@ const organizedColors = {
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
     { name: "Ice", hex: "#F9F9F7" },
+    { name: "Perfumed Letter", hex: "#F7F5F5" },
     { name: "Gimlet", hex: "#F7F7F7" },
     { name: "Frost", hex: "#F7F7F5" },
     { name: "Confident", hex: "#FFFFFD" },
