@@ -41,7 +41,7 @@ const organizedColors = {
     { name: "Old Moss", hex: "#443E35" },
     { name: "Running Shoe", hex: "#75695d" },
     { name: "Elephant", hex: "#969487" },
-	{ name: "Model Plane", hex: "#8A9EA0" },
+    { name: "Model Plane", hex: "#8A9EA0" },
     { name: "Airplane", hex: "#BCBAB1" },
     { name: "Eiderdown", hex: "#E0E0D5" },
     { name: "Antler", hex: "#D8D5CB" },
