@@ -7,6 +7,8 @@ const organizedColors = {
     { name: "Gimlet", hex: "#F7F7F7" },
     { name: "Frost", hex: "#F7F7F5" },
     { name: "Confident", hex: "#FFFFFD" },
+    { name: "Testament", hex: "#f9f9f2" },
+
   ],
   Neutrals: [
     { name: "GoatMilk", hex: "#FFFEF5" },
@@ -32,6 +34,7 @@ const organizedColors = {
     { name: "Old Bone", hex: "#E8E8CA" },
   ],
   greys: [
+    { name: "Milan II", hex: "#dfe2cf" },
     { name: "Venician Coat", hex: "#C1BBA0" },
     { name: "Old Flag", hex: "#C1BEA4" },
     { name: "Oyster 2", hex: "#BAB5A0" },
@@ -256,7 +259,10 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
+
+
     { name: "Fog", hex: "#728ba3" },
+    { name: "Octopus", hex: "#0b4159" },
     { name: "Userblue", hex: "#2c3e50" },
     { name: "Umbrella", hex: "#0e56ad" },
     { name: "Darker Focus", hex: "#0F1D38" },
