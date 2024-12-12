@@ -174,6 +174,7 @@ const organizedColors = {
     { name: "Gumdrop", hex: "#FEB637" },
   ],
   yellows: [
+    { name: "coneFlower", hex: "#ffc306" },
     { name: "Buttercup", hex: "#EBC81A" },
     { name: "Goldenberry", hex: "#F2CB0A" },
     { name: "Sunrise", hex: "#F4D30C" },
@@ -189,6 +190,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Birch Leaf", hex: "#5c7226" },
+    { name: "Ru Ware", hex: "#eff4ea" },
     { name: "Cereal Bowl", hex: "#e0e8d3" },
     { name: "Contract", hex: "#497a09" },
     { name: "Fern Modern", hex: "#26443E" },
@@ -259,8 +262,10 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
-
-
+    { name: "Sorcerer", hex: "#0c1b66" },
+    { name: "Bicycle III", hex: "#d0eae5" },
+    { name: "Modern Teal 1", hex: "#2a6377" },
+    { name: "SnowDrop", hex: "#b3d4e2" },
     { name: "Fog", hex: "#728ba3" },
     { name: "Octopus", hex: "#0b4159" },
     { name: "Userblue", hex: "#2c3e50" },
@@ -318,6 +323,7 @@ const organizedColors = {
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
   purples: [
+    { name: "Plum", hex: "#562a75" },
     { name: "Grape Soda", hex: "#7458DB" },
     { name: "Tokyo", hex: "#A0139D" },
     { name: "Spellbook", hex: "#A359D8" },
