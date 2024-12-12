@@ -33,6 +33,7 @@ const organizedColors = {
   ],
   greys: [
     { name: "Venician Coat", hex: "#C1BBA0" },
+    { name: "Fog", hex: "#728ba3" },
     { name: "Old Flag", hex: "#C1BEA4" },
     { name: "Oyster 2", hex: "#BAB5A0" },
     { name: "Oyster 3", hex: "#999B89" },
@@ -116,6 +117,7 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "TerraCotta", hex: "#ba763e" },
     { name: "Turtle Shell", hex: "#CEC8AB" },
     { name: "1926 Flat Cap", hex: "#E5DDBA" },
     { name: "Sand Dollar", hex: "#D6D0B4" },
@@ -186,6 +188,7 @@ const organizedColors = {
   ],
   greens: [
     { name: "Cereal Bowl", hex: "#e0e8d3" },
+    { name: "Contract", hex: "#497a09" },
     { name: "Fern Modern", hex: "#26443E" },
     { name: "Alpine Simple", hex: "#14423A" },
     { name: "Lily Moderne", hex: "#CAD8B2" },
@@ -255,6 +258,7 @@ const organizedColors = {
   ],
   blues: [
     { name: "Userblue", hex: "#2c3e50" },
+    { name: "Umbrella", hex: "#0e56ad" },
     { name: "Darker Focus", hex: "#0F1D38" },
     { name: "Rosicrucian", hex: "#0F1D38" },
     { name: "DeepOcean", hex: "#0F1D38" },
