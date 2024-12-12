@@ -33,7 +33,6 @@ const organizedColors = {
   ],
   greys: [
     { name: "Venician Coat", hex: "#C1BBA0" },
-    { name: "Fog", hex: "#728ba3" },
     { name: "Old Flag", hex: "#C1BEA4" },
     { name: "Oyster 2", hex: "#BAB5A0" },
     { name: "Oyster 3", hex: "#999B89" },
@@ -257,6 +256,7 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
+    { name: "Fog", hex: "#728ba3" },
     { name: "Userblue", hex: "#2c3e50" },
     { name: "Umbrella", hex: "#0e56ad" },
     { name: "Darker Focus", hex: "#0F1D38" },
