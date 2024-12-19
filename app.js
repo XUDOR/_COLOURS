@@ -11,6 +11,7 @@ const organizedColors = {
 
   ],
   Neutrals: [
+  	{ name: "Ancient Scroll", hex: "#E0D7C2" },
     { name: "GoatMilk", hex: "#FFFEF5" },
     { name: "Ivory", hex: "#FCFBF2" },
     { name: "Book", hex: "#F9F7E8" },
@@ -32,8 +33,15 @@ const organizedColors = {
     { name: "1000 TC Linen", hex: "#EFE7C5" },
     { name: "Fromage de Meaux", hex: "#EFEAAB" },
     { name: "Old Bone", hex: "#E8E8CA" },
+	
   ],
   greys: [
+    { name: "Math Class", hex: "#b7b1a5" },
+  	{ name: "Forged Steel", hex: "#A9A9A9" },
+  	{ name: "Weathered Stone", hex: "#BFBFBF" },
+  	{ name: "Ironclad", hex: "#4A4A4A" },
+  	{ name: "Morning Mist", hex: "#DADADA" },
+  	{ name: "Silver Lining", hex: "#ECECEC" },
     { name: "Milan II", hex: "#dfe2cf" },
     { name: "Venician Coat", hex: "#C1BBA0" },
     { name: "Old Flag", hex: "#C1BEA4" },
@@ -119,6 +127,8 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+  	{ name: "Earthenware", hex: "#C2B280" },
+  	{ name: "Desert Mirage", hex: "#D8C3A5" },
     { name: "TerraCotta", hex: "#ba763e" },
     { name: "Turtle Shell", hex: "#CEC8AB" },
     { name: "1926 Flat Cap", hex: "#E5DDBA" },
