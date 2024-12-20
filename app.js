@@ -36,6 +36,10 @@ const organizedColors = {
 	
   ],
   greys: [
+    { name: "Prospective", hex: "#f2f4ed" },
+    { name: "Mushroom", hex: "#e1e5d6" },
+    { name: "Mosco", hex: "#888e7c" },
+    { name: "Cartesian", hex: "#b7b19e" },
     { name: "Math Class", hex: "#b7b1a5" },
   	{ name: "Forged Steel", hex: "#A9A9A9" },
   	{ name: "Weathered Stone", hex: "#BFBFBF" },
@@ -127,6 +131,7 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "Branch", hex: "#685933" },
   	{ name: "Earthenware", hex: "#C2B280" },
   	{ name: "Desert Mirage", hex: "#D8C3A5" },
     { name: "TerraCotta", hex: "#ba763e" },
@@ -273,6 +278,8 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
+    { name: "SwordFish I", hex: "#335D7E" },
+    { name: "Modern Graph", hex: "#3b5450" },
     { name: "Sorcerer", hex: "#0c1b66" },
     { name: "Bicycle III", hex: "#d0eae5" },
     { name: "Modern Teal 1", hex: "#2a6377" },
