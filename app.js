@@ -160,6 +160,11 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+  	{ name: "Sakura II", hex: "#a54e42" },
+  	{ name: "Sakura I", hex: "#964040" },
+  	{ name: "Madeira", hex: "#541d05" },
+  	{ name: "Rose Classic", hex: "#931818" },
+    { name: "Scarlet", hex: "#891616" },
     { name: "Hibiscus", hex: "#E04C4C" },
     { name: "Fig", hex: "#774D4D" },
     { name: "Rhubarb I", hex: "#9D4B45" },
@@ -278,6 +283,7 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
   ],
   blues: [
+    { name: "Bluberry", hex: "#10569b" },
     { name: "SwordFish I", hex: "#335D7E" },
     { name: "Modern Graph", hex: "#3b5450" },
     { name: "Sorcerer", hex: "#0c1b66" },
@@ -340,7 +346,9 @@ const organizedColors = {
     { name: "Narwhal", hex: "#446360" },
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
-  purples: [
+  purples: [  	
+  	{ name: "GoldenWeek", hex: "#efd8e1" },
+  	{ name: "Fuchsia", hex: "#b59cb5" },
     { name: "Plum", hex: "#562a75" },
     { name: "Grape Soda", hex: "#7458DB" },
     { name: "Tokyo", hex: "#A0139D" },
@@ -349,7 +357,11 @@ const organizedColors = {
     { name: "Joker", hex: "#AD6AC6" },
 
   ],
-  FleshTones: [
+  FleshTones: [  
+  	{ name: "Yoyogi", hex: "#e2b5af" },
+  	{ name: "Shinjuku", hex: "#f4c6bd" },
+  	{ name: "Haruko II", hex: "#db7777" },
+  	{ name: "Haruko I", hex: "#c66a6a" },
     { name: "Blush", hex: "#E56161" },
     { name: "Fuscia 1", hex: "#C96363" },
     { name: "Fleshy", hex: "#E28181" },
