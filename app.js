@@ -36,6 +36,7 @@ const organizedColors = {
 	
   ],
   greys: [
+    { name: "Noveaux", hex: "#b5c6bd" },
     { name: "Prospective", hex: "#f2f4ed" },
     { name: "Mushroom", hex: "#e1e5d6" },
     { name: "Mosco", hex: "#888e7c" },
@@ -283,7 +284,11 @@ const organizedColors = {
     { name: "Lichen IV", hex: "#EBEFDF" },
     { name: "Tidal", hex: "#E0DEAF" },
   ],
+
+  
+
   blues: [
+    { name: "Angel", hex: "#81a0bc" },
     { name: "Bluberry", hex: "#10569b" },
     { name: "SwordFish I", hex: "#335D7E" },
     { name: "Modern Graph", hex: "#3b5450" },
