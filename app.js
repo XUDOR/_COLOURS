@@ -11,6 +11,7 @@ const organizedColors = {
 
   ],
   Neutrals: [
+    { name: "Hemp Cnavas", hex: "#EBEDE4" },
   	{ name: "Ancient Scroll", hex: "#E0D7C2" },
     { name: "GoatMilk", hex: "#FFFEF5" },
     { name: "Ivory", hex: "#FCFBF2" },
@@ -161,6 +162,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Melborne Night", hex: "#ED5D15" },
   	{ name: "Sakura II", hex: "#a54e42" },
   	{ name: "Sakura I", hex: "#964040" },
   	{ name: "Madeira", hex: "#541d05" },
@@ -182,6 +184,7 @@ const organizedColors = {
     { name: "Valentine I", hex: "#B94000" },
   ],
   oranges: [
+    { name: "Sorbet", hex: "#E8740A" },
     { name: "JackLantern", hex: "#ED6407" },
     { name: "Neroli", hex: "#D69421" },
     { name: "Neroli II", hex: "#DB8C2D" },
@@ -195,6 +198,7 @@ const organizedColors = {
     { name: "Gumdrop", hex: "#FEB637" },
   ],
   yellows: [
+    { name: "NewDay", hex: "#E2AB10" },
     { name: "coneFlower", hex: "#ffc306" },
     { name: "Buttercup", hex: "#EBC81A" },
     { name: "Goldenberry", hex: "#F2CB0A" },
@@ -210,7 +214,12 @@ const organizedColors = {
     { name: "Temple", hex: "#ECB235" },
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
-  greens: [     
+  greens: [    
+    { name: "Deco", hex: "#B2C66A" },
+    { name: "Furniture", hex: "#1D280F" }, 
+    { name: "Title", hex: "#455111" },
+    { name: "Mosaic Tile", hex: "#95AA3C" },
+    { name: "Envy", hex: "#428716" },
     { name: "Jungle I", hex: "#82bf0c" },
     { name: "Opportunity", hex: "#69a535" },
     { name: "Birch Leaf", hex: "#5c7226" },
@@ -288,6 +297,11 @@ const organizedColors = {
   
 
   blues: [
+    { name: "Solid", hex: "#1F3AAD" },
+    { name: "Beautiful", hex: "#0C2D77" },
+    { name: "Blue Pebble", hex: "#387D9B" },
+    { name: "Ajina", hex: "#2686C6" },
+    { name: "Turquoise", hex: "#3DA3A8" },
     { name: "Angel", hex: "#81a0bc" },
     { name: "Bluberry", hex: "#10569b" },
     { name: "SwordFish I", hex: "#335D7E" },
@@ -352,7 +366,10 @@ const organizedColors = {
     { name: "Narwhal", hex: "#446360" },
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
-  purples: [  	
+  purples: [ 
+    
+    { name: "Sahasrara", hex: "#A83D84" },
+    { name: "Diversity", hex: "#9D3DA8" },
   	{ name: "GoldenWeek", hex: "#efd8e1" },
   	{ name: "Fuchsia", hex: "#b59cb5" },
     { name: "Plum", hex: "#562a75" },
