@@ -11,6 +11,7 @@ const organizedColors = {
 
   ],
   Neutrals: [
+    { name: "Portfolio", hex: "#E2DEBF" },
     { name: "Hemp Cnavas", hex: "#EBEDE4" },
   	{ name: "Ancient Scroll", hex: "#E0D7C2" },
     { name: "GoatMilk", hex: "#FFFEF5" },
