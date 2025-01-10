@@ -214,7 +214,9 @@ const organizedColors = {
     { name: "Temple", hex: "#ECB235" },
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
-  greens: [    
+  greens: [
+    { name: "Lizard", hex: "#4C4705" },
+    { name: "Drum&Bass", hex: "#878118" },
     { name: "Deco", hex: "#B2C66A" },
     { name: "Furniture", hex: "#1D280F" }, 
     { name: "Title", hex: "#455111" },
