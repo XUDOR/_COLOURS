@@ -8,6 +8,9 @@ const organizedColors = {
     { name: "Frost", hex: "#F7F7F5" },
     { name: "Confident", hex: "#FFFFFD" },
     { name: "Testament", hex: "#f9f9f2" },
+    { name: "snow", hex: "#F8FDFF" },
+    { name: "Raincloud", hex: "#F1F8FF" },
+    
 
   ],
   Neutrals: [
@@ -37,7 +40,8 @@ const organizedColors = {
     { name: "Old Bone", hex: "#E8E8CA" },
 	
   ],
-  greys: [
+  greys: [ 
+    { name: "Dover", hex: "#D9E7EE" },
     { name: "Noveaux", hex: "#b5c6bd" },
     { name: "Prospective", hex: "#f2f4ed" },
     { name: "Mushroom", hex: "#e1e5d6" },
@@ -300,6 +304,11 @@ const organizedColors = {
   
 
   blues: [
+    { name: "Opal", hex: "#48BBD8" },
+    { name: "Carnival", hex: "#DCF4FF" },
+    { name: "VW BUG", hex: "#A1DCF0" },
+    { name: "Bluebell II", hex: "#73B4E0" },
+    { name: "Approval", hex: "#0A375B" },
     { name: "Solid", hex: "#1F3AAD" },
     { name: "Beautiful", hex: "#0C2D77" },
     { name: "Blue Pebble", hex: "#387D9B" },
