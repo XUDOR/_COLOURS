@@ -220,6 +220,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Tomatillo", hex: "#AAAA17" },
     { name: "Lizard", hex: "#4C4705" },
     { name: "Drum&Bass", hex: "#878118" },
     { name: "Deco", hex: "#B2C66A" },
