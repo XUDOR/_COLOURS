@@ -41,6 +41,7 @@ const organizedColors = {
 	
   ],
   greys: [ 
+    { name: "Schema", hex: "#AAAAA3" },
     { name: "Dover", hex: "#D9E7EE" },
     { name: "Noveaux", hex: "#b5c6bd" },
     { name: "Prospective", hex: "#f2f4ed" },
