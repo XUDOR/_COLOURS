@@ -2,6 +2,7 @@ const organizedColors = {
   whites: [
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
+
     { name: "Ice", hex: "#F9F9F7" },
     { name: "Perfumed Letter", hex: "#F7F5F5" },
     { name: "Gimlet", hex: "#F7F7F7" },
@@ -21,6 +22,7 @@ const organizedColors = {
     { name: "Ivory", hex: "#FCFBF2" },
     { name: "Book", hex: "#F9F7E8" },
     { name: "Document", hex: "#FFFFFA" },
+    { name: "Legal", hex: "#F9F7F7" },
     { name: "Parchment", hex: "#FFFADF" },
     { name: "Linen", hex: "#FBFBF4" },
     { name: "Milk", hex: "#FFFFE5" },
