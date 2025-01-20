@@ -45,6 +45,7 @@ const organizedColors = {
     { name: "Noveaux", hex: "#b5c6bd" },
     { name: "Prospective", hex: "#f2f4ed" },
     { name: "Mushroom", hex: "#e1e5d6" },
+    { name: "Mushroom II", hex: "#F9F8F4" },
     { name: "Mosco", hex: "#888e7c" },
     { name: "Cartesian", hex: "#b7b19e" },
     { name: "Math Class", hex: "#b7b1a5" },
