@@ -41,6 +41,7 @@ const organizedColors = {
 	
   ],
   greys: [ 
+    { name: "HI FI", hex: "#605E4A" },
     { name: "Schema", hex: "#AAAAA3" },
     { name: "Noveaux", hex: "#b5c6bd" },
     { name: "Prospective", hex: "#f2f4ed" },
