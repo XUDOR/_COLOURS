@@ -2,7 +2,7 @@ const organizedColors = {
   whites: [
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
-
+    { name: "Ice Cream", hex: "#F9F9F9" },
     { name: "Ice", hex: "#F9F9F7" },
     { name: "Perfumed Letter", hex: "#F7F5F5" },
     { name: "Gimlet", hex: "#F7F7F7" },
@@ -11,13 +11,13 @@ const organizedColors = {
     { name: "Testament", hex: "#f9f9f2" },
     { name: "snow", hex: "#F8FDFF" },
     { name: "Raincloud", hex: "#F1F8FF" },
-    
+
 
   ],
   Neutrals: [
     { name: "Portfolio", hex: "#E2DEBF" },
     { name: "Hemp Cnavas", hex: "#EBEDE4" },
-  	{ name: "Ancient Scroll", hex: "#E0D7C2" },
+    { name: "Ancient Scroll", hex: "#E0D7C2" },
     { name: "GoatMilk", hex: "#FFFEF5" },
     { name: "Ivory", hex: "#FCFBF2" },
     { name: "Book", hex: "#F9F7E8" },
@@ -40,9 +40,9 @@ const organizedColors = {
     { name: "1000 TC Linen", hex: "#EFE7C5" },
     { name: "Fromage de Meaux", hex: "#EFEAAB" },
     { name: "Old Bone", hex: "#E8E8CA" },
-	
+
   ],
-  greys: [ 
+  greys: [
     { name: "HI FI", hex: "#605E4A" },
     { name: "Schema", hex: "#AAAAA3" },
     { name: "Noveaux", hex: "#b5c6bd" },
@@ -52,11 +52,11 @@ const organizedColors = {
     { name: "Mosco", hex: "#888e7c" },
     { name: "Cartesian", hex: "#b7b19e" },
     { name: "Math Class", hex: "#b7b1a5" },
-  	{ name: "Forged Steel", hex: "#A9A9A9" },
-  	{ name: "Weathered Stone", hex: "#BFBFBF" },
-  	{ name: "Ironclad", hex: "#4A4A4A" },
-  	{ name: "Morning Mist", hex: "#DADADA" },
-  	{ name: "Silver Lining", hex: "#ECECEC" },
+    { name: "Forged Steel", hex: "#A9A9A9" },
+    { name: "Weathered Stone", hex: "#BFBFBF" },
+    { name: "Ironclad", hex: "#4A4A4A" },
+    { name: "Morning Mist", hex: "#DADADA" },
+    { name: "Silver Lining", hex: "#ECECEC" },
     { name: "Milan II", hex: "#dfe2cf" },
     { name: "Venician Coat", hex: "#C1BBA0" },
     { name: "Old Flag", hex: "#C1BEA4" },
@@ -143,8 +143,8 @@ const organizedColors = {
   ],
   EarthTones: [
     { name: "Branch", hex: "#685933" },
-  	{ name: "Earthenware", hex: "#C2B280" },
-  	{ name: "Desert Mirage", hex: "#D8C3A5" },
+    { name: "Earthenware", hex: "#C2B280" },
+    { name: "Desert Mirage", hex: "#D8C3A5" },
     { name: "TerraCotta", hex: "#ba763e" },
     { name: "Turtle Shell", hex: "#CEC8AB" },
     { name: "1926 Flat Cap", hex: "#E5DDBA" },
@@ -171,12 +171,13 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Scarlet", hex: "#9B2345" },
     { name: "Vampire", hex: "#280E05" },
     { name: "Melborne Night", hex: "#ED5D15" },
-  	{ name: "Sakura II", hex: "#a54e42" },
-  	{ name: "Sakura I", hex: "#964040" },
-  	{ name: "Madeira", hex: "#541d05" },
-  	{ name: "Rose Classic", hex: "#931818" },
+    { name: "Sakura II", hex: "#a54e42" },
+    { name: "Sakura I", hex: "#964040" },
+    { name: "Madeira", hex: "#541d05" },
+    { name: "Rose Classic", hex: "#931818" },
     { name: "Scarlet", hex: "#891616" },
     { name: "Hibiscus", hex: "#E04C4C" },
     { name: "Fig", hex: "#774D4D" },
@@ -229,7 +230,7 @@ const organizedColors = {
     { name: "Lizard", hex: "#4C4705" },
     { name: "Drum&Bass", hex: "#878118" },
     { name: "Deco", hex: "#B2C66A" },
-    { name: "Furniture", hex: "#1D280F" }, 
+    { name: "Furniture", hex: "#1D280F" },
     { name: "Title", hex: "#455111" },
     { name: "Mosaic Tile", hex: "#95AA3C" },
     { name: "Envy", hex: "#428716" },
@@ -383,12 +384,12 @@ const organizedColors = {
     { name: "Narwhal", hex: "#446360" },
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
-  purples: [ 
-    
+  purples: [
+
     { name: "Sahasrara", hex: "#A83D84" },
     { name: "Diversity", hex: "#9D3DA8" },
-  	{ name: "GoldenWeek", hex: "#efd8e1" },
-  	{ name: "Fuchsia", hex: "#b59cb5" },
+    { name: "GoldenWeek", hex: "#efd8e1" },
+    { name: "Fuchsia", hex: "#b59cb5" },
     { name: "Plum", hex: "#562a75" },
     { name: "Grape Soda", hex: "#7458DB" },
     { name: "Tokyo", hex: "#A0139D" },
@@ -397,12 +398,12 @@ const organizedColors = {
     { name: "Joker", hex: "#AD6AC6" },
 
   ],
-  FleshTones: [  
+  FleshTones: [
     { name: "Plum Sauce", hex: "#A8978F" },
-  	{ name: "Yoyogi", hex: "#e2b5af" },
-  	{ name: "Shinjuku", hex: "#f4c6bd" },
-  	{ name: "Haruko II", hex: "#db7777" },
-  	{ name: "Haruko I", hex: "#c66a6a" },
+    { name: "Yoyogi", hex: "#e2b5af" },
+    { name: "Shinjuku", hex: "#f4c6bd" },
+    { name: "Haruko II", hex: "#db7777" },
+    { name: "Haruko I", hex: "#c66a6a" },
     { name: "Blush", hex: "#E56161" },
     { name: "Fuscia 1", hex: "#C96363" },
     { name: "Fleshy", hex: "#E28181" },
