@@ -43,6 +43,9 @@ const organizedColors = {
 
   ],
   greys: [
+    
+    { name: "Jumpsuit", hex: "#727268" },
+    { name: "Manual", hex: "#E2E2DC" },
     { name: "HI FI", hex: "#605E4A" },
     { name: "Schema", hex: "#AAAAA3" },
     { name: "Noveaux", hex: "#b5c6bd" },
@@ -112,6 +115,8 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+
+    { name: "Void", hex: "#0C0C0B" },
     { name: "Cali Feature Wall", hex: "#330404" },
     { name: "Steel", hex: "#2D2D2D" },
     { name: "Porpoise", hex: "#363839" },
