@@ -404,6 +404,7 @@ const organizedColors = {
 
   ],
   FleshTones: [
+    { name: "Lychee I", hex: "#EFDFDF" },
     { name: "Plum Sauce", hex: "#A8978F" },
     { name: "Yoyogi", hex: "#e2b5af" },
     { name: "Shinjuku", hex: "#f4c6bd" },
