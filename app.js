@@ -176,6 +176,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Ruby", hex: "#160804" },
     { name: "Scarlet", hex: "#9B2345" },
     { name: "Vampire", hex: "#280E05" },
     { name: "Melborne Night", hex: "#ED5D15" },
@@ -404,6 +405,7 @@ const organizedColors = {
 
   ],
   FleshTones: [
+    { name: "Sakura III", hex: "#F4EAEB" },
     { name: "Lychee I", hex: "#EFDFDF" },
     { name: "Plum Sauce", hex: "#A8978F" },
     { name: "Yoyogi", hex: "#e2b5af" },
