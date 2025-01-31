@@ -176,6 +176,11 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Motorcycle", hex: "#FC003C"},
+    { name: "Ridinghood", hex: "#A8001C"},
+    { name: "Blood", hex: "#6D000D"},
+    { name: "Aka", hex: "#DD1905"},
+    { name: "Cadmium", hex: "#E82B05" },
     { name: "Ruby", hex: "#160804" },
     { name: "Scarlet", hex: "#9B2345" },
     { name: "Vampire", hex: "#280E05" },
