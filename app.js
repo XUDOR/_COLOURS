@@ -433,6 +433,9 @@ const organizedColors = {
   ],
 };
 
+/// =====================================================================================
+/// =====================================================================================
+
 document.addEventListener('DOMContentLoaded', () => {
   const colorGrid = document.getElementById('colorGrid');
   const titleElement = document.querySelector('.title');
@@ -442,11 +445,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let applyToBody = false;
   let applyToText = false;
   let applyToCard = false;
+  let applyToBorder = false; // New: Border toggle state
 
   // Default colors
   const defaultBackgroundColor = '#f9f9f9';
   const defaultTextColor = '#333';
   const defaultCardColor = '#fff';
+  const defaultBorderColor = '#eaeaea'; // New: Default border color
 
   // Swatch state variables
   const swatches = [
@@ -462,6 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`Body toggle is ${applyToBody ? 'ON' : 'OFF'}`);
     console.log(`Text toggle is ${applyToText ? 'ON' : 'OFF'}`);
     console.log(`Card toggle is ${applyToCard ? 'ON' : 'OFF'}`);
+    console.log(`Border toggle is ${applyToBorder ? 'ON' : 'OFF'}`);
     swatches.forEach((swatch, index) => {
       console.log(`Swatch ${index + 1} toggle is ${swatch.apply ? 'ON' : 'OFF'}`);
     });
@@ -499,6 +505,15 @@ document.addEventListener('DOMContentLoaded', () => {
     logToggleStates();
   });
 
+  // Border toggle
+  document.getElementById('border').addEventListener('click', () => {
+    applyToBorder = !applyToBorder;
+    const button = document.getElementById('border');
+    button.classList.toggle('active', applyToBorder);
+    button.style.borderColor = applyToBorder ? 'olive' : 'lightblue';
+    logToggleStates();
+  });
+
   // Swatch toggles
   swatches.forEach((swatch) => {
     const toggleButton = document.getElementById(swatch.toggleId);
@@ -530,6 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset color cards
     document.querySelectorAll('.color-card').forEach((card) => {
       card.style.backgroundColor = defaultCardColor;
+      card.style.borderColor = defaultBorderColor;
     });
 
     // Reset swatches
@@ -538,7 +554,14 @@ document.addEventListener('DOMContentLoaded', () => {
       swatchElement.style.backgroundColor = defaultCardColor;
     });
 
-    console.log('Reset to default colors.');
+    // Reset borders
+    document.querySelectorAll('.color-card, .palette-card').forEach((element) => {
+      element.style.borderColor = defaultBorderColor;
+    });
+    // Reset title border
+    titleElement.style.borderBottom = '5px solid #fff';
+
+    console.log('Reset to default colors and borders.');
   });
 
   // Helper function to convert RGB to HEX
@@ -560,6 +583,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardColor = rgbToHex(
       document.querySelector('.color-card')?.style.backgroundColor || defaultCardColor
     );
+    const borderColor = rgbToHex(
+      document.querySelector('.color-card')?.style.borderColor || defaultBorderColor
+    );
 
     // Get swatch colors
     const swatchColors = {};
@@ -573,11 +599,11 @@ document.addEventListener('DOMContentLoaded', () => {
       bodyColor,
       textColor,
       cardColor,
+      borderColor,
       swatchColors,
     };
 
     const jsonContent = JSON.stringify(colorSnapshot, null, 2);
-
     const blob = new Blob([jsonContent], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -628,6 +654,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Update borders
+    if (applyToBorder) {
+      document.querySelectorAll('.color-card, .palette-card').forEach((element) => {
+        element.style.borderColor = hex;
+      });
+      // Update title border
+      titleElement.style.borderBottom = `5px solid ${hex}`;
+    }
+
     // Update swatches
     swatches.forEach((swatch) => {
       if (swatch.apply) {
@@ -659,6 +694,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (applyToCard) {
       document.querySelectorAll('.color-card').forEach((card) => {
         card.style.backgroundColor = hex;
+      });
+    }
+
+    // Update borders
+    if (applyToBorder) {
+      document.querySelectorAll('.color-card, .palette-card').forEach((element) => {
+        element.style.borderColor = hex;
       });
     }
 
@@ -755,7 +797,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const summaryElement = document.createElement('summary');
       summaryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
 
-      // Create a random color square for the category heading
       const randomColor =
         organizedColors[category][Math.floor(Math.random() * organizedColors[category].length)].hex;
       const colorSquare = document.createElement('div');
