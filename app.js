@@ -42,8 +42,8 @@ const organizedColors = {
     { name: "Old Bone", hex: "#E8E8CA" },
 
   ],
-  greys: [
-    
+  greys: [ 
+    { name: "Professional", hex: "#7C796D" },
     { name: "Jumpsuit", hex: "#727268" },
     { name: "Manual", hex: "#E2E2DC" },
     { name: "HI FI", hex: "#605E4A" },
