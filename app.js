@@ -44,6 +44,7 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "Rocket", hex: "#BCBCBB" },
     { name: "Professional", hex: "#7C796D" },
     { name: "Jumpsuit", hex: "#727268" },
     { name: "Manual", hex: "#E2E2DC" },
