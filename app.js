@@ -1,5 +1,8 @@
 const organizedColors = {
   whites: [
+    { name: "Snow Clouds II", hex: "#FEFEFA" },
+    { name: "Snow Clouds III", hex: "#F0F9EB" },
+    { name: "Snow Clouds IV", hex: "#FEFEFD" },
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
     { name: "Ice Cream", hex: "#F9F9F9" },
@@ -15,6 +18,8 @@ const organizedColors = {
 
   ],
   Neutrals: [
+    { name: "Algonquin", hex: "#EAE9C5" },
+    { name: "MacDonald II", hex: "#E9F7D5" },
     { name: "Sandcastle", hex: "#D6D1BA" },
     { name: "Portfolio", hex: "#E2DEBF" },
     { name: "Hemp Cnavas", hex: "#EBEDE4" },
@@ -44,6 +49,12 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "Snow Clouds II", hex: "#D5D9C3" },
+    { name: "Snow Clouds III", hex: "#CCD1B9" },
+    { name: "Snow Clouds IV", hex: "#A7A891" },
+    { name: "Snow Clouds V", hex: "#CCD2BA" },
+    { name: "Snow Clouds VI", hex: "#9AA28D" },
+    { name: "Snow Clouds VII", hex: "#C3C9B4" },
     { name: "Rocket", hex: "#BCBCBB" },
     { name: "Professional", hex: "#7C796D" },
     { name: "Jumpsuit", hex: "#727268" },
@@ -117,7 +128,13 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
-
+    { name: "Carr Black", hex: "#20231F" },
+    { name: "Thompson Black", hex: "#202323" },
+    { name: "Jackson Black", hex: "#291E27" },
+    { name: "Carmichael Black", hex: "#1E2A19" },
+    { name: "Jackson Black II", hex: "#221E1F" },
+    { name: "Algonquin Black", hex: "#181412" },
+    { name: "Casson Black", hex: "#0D0B0E" },
     { name: "Void", hex: "#0C0C0B" },
     { name: "Cali Feature Wall", hex: "#330404" },
     { name: "Steel", hex: "#2D2D2D" },
@@ -149,6 +166,12 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "Varley", hex: "#867E51" },
+    { name: "Varley II", hex: "#6B6143" },
+    { name: "Varley III", hex: "#BEA36C" },
+    { name: "Varley IV", hex: "#AC8950" },
+    { name: "Varley V", hex: "#B07D4A" },
+    { name: "Carr VI", hex: "#6E452D" },
     { name: "Branch", hex: "#685933" },
     { name: "Earthenware", hex: "#C2B280" },
     { name: "Desert Mirage", hex: "#D8C3A5" },
@@ -178,6 +201,18 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Jackson I", hex: "#C5131A"},
+    { name: "Jackson II", hex: "#8D2016"},
+    { name: "Jackson III", hex: "#7A140B"},
+    { name: "Jackson IV", hex: "#CA381C"},
+    { name: "Jackson V", hex: "#DA5A35"},
+    { name: "Jackson VI", hex: "#973615"},
+    { name: "Jackson VII", hex: "#A53E29"},
+    { name: "Jackson VIII", hex: "#A5302F"},
+    { name: "Harris I", hex: "#864132"},
+    { name: "Harris II", hex: "#8D4B49"},
+    { name: "Harris IV", hex: "#8B5047"},
+    { name: "Harris VI", hex: "#8E3137"},
     { name: "Motorcycle", hex: "#FC003C"},
     { name: "Ridinghood", hex: "#A8001C"},
     { name: "Blood", hex: "#6D000D"},
@@ -208,6 +243,9 @@ const organizedColors = {
     { name: "Valentine I", hex: "#B94000" },
   ],
   oranges: [
+    { name: "Thompson I", hex: "#D28B49" },
+    { name: "Thompson II", hex: "#C48044" },
+    { name: "Carr Organge", hex: "#B36734" },
     { name: "Sorbet", hex: "#E8740A" },
     { name: "JackLantern", hex: "#ED6407" },
     { name: "Neroli", hex: "#D69421" },
@@ -239,6 +277,11 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Carr I", hex: "#9DAB71" },
+    { name: "Carr II", hex: "#585D42" },
+    { name: "Carr III", hex: "#5E5633" },
+    { name: "MacDonald I", hex: "#DBDFBD" },
+    { name: "MacDonald III", hex: "#A5AB87" },
     { name: "Tomatillo", hex: "#AAAA17" },
     { name: "Lizard", hex: "#4C4705" },
     { name: "Drum&Bass", hex: "#878118" },
@@ -319,9 +362,13 @@ const organizedColors = {
     { name: "Lichen III", hex: "#F1F4EA" },
     { name: "Lichen IV", hex: "#EBEFDF" },
     { name: "Tidal", hex: "#E0DEAF" },
+    { name: "Carmichael II", hex: "#4A5443" },
+    { name: "Carmichael III", hex: "#759F8C" },
   ],
 
   blues: [ 
+    { name: "Carmichael I", hex: "#30494C" },
+    { name: "Snow Clouds", hex: "#859E98" },
     { name: "River", hex: "#3D6C9B" },
     { name: "Dover", hex: "#D9E7EE" },
     { name: "Opal", hex: "#48BBD8" },
@@ -399,7 +446,10 @@ const organizedColors = {
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
   purples: [
-
+    { name: "Carr IV", hex: "#5B2130" },
+    { name: "Carr V", hex: "#60362B" },
+    { name: "Carr VII", hex: "#5D343F" },
+    { name: "Carr VIII", hex: "#452028" },
     { name: "Sahasrara", hex: "#A83D84" },
     { name: "Diversity", hex: "#9D3DA8" },
     { name: "GoldenWeek", hex: "#efd8e1" },
@@ -413,6 +463,8 @@ const organizedColors = {
 
   ],
   FleshTones: [
+    { name: "Harris V", hex: "#AD5453"},
+    { name: "Harris III", hex: "#A75B57"},
     { name: "Sakura III", hex: "#F4EAEB" },
     { name: "Lychee I", hex: "#EFDFDF" },
     { name: "Plum Sauce", hex: "#A8978F" },
