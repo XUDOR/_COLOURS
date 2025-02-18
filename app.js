@@ -1,7 +1,7 @@
 const organizedColors = {
   whites: [
     { name: "Snow Clouds II", hex: "#FEFEFA" },
-    { name: "Snow Clouds III", hex: "#F0F9EB" },
+   
     { name: "Snow Clouds IV", hex: "#FEFEFD" },
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
@@ -19,7 +19,7 @@ const organizedColors = {
   ],
   Neutrals: [
     { name: "Algonquin", hex: "#EAE9C5" },
-    { name: "MacDonald II", hex: "#E9F7D5" },
+   
     { name: "Sandcastle", hex: "#D6D1BA" },
     { name: "Portfolio", hex: "#E2DEBF" },
     { name: "Hemp Cnavas", hex: "#EBEDE4" },
@@ -361,6 +361,8 @@ const organizedColors = {
     { name: "Limpet", hex: "#D9F3E5" },
     { name: "Lichen III", hex: "#F1F4EA" },
     { name: "Lichen IV", hex: "#EBEFDF" },
+    { name: "Snow Clouds III", hex: "#F0F9EB" },
+    { name: "MacDonald II", hex: "#E9F7D5" },
     { name: "Tidal", hex: "#E0DEAF" },
     { name: "Carmichael II", hex: "#4A5443" },
     { name: "Carmichael III", hex: "#759F8C" },
