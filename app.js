@@ -370,6 +370,7 @@ const organizedColors = {
   ],
 
   blues: [ 
+    { name: "SmoothText", hex: "#a9bedb" },
     { name: "Carmichael I", hex: "#30494C" },
     { name: "Snow Clouds", hex: "#859E98" },
     { name: "River", hex: "#3D6C9B" },
