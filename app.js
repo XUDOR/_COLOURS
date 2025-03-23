@@ -231,6 +231,7 @@ const organizedColors = {
     { name: "Hibiscus", hex: "#E04C4C" },
     { name: "Fig", hex: "#774D4D" },
     { name: "Rhubarb I", hex: "#9D4B45" },
+    { name: "Rhubarb II", hex: "#a54141" },
     { name: "Swallow", hex: "#A24035" },
     { name: "Chelan", hex: "#57030A" },
     { name: "Robin", hex: "#A32E0A" },
@@ -242,6 +243,8 @@ const organizedColors = {
     { name: "Gold Coast", hex: "#E0431E" },
     { name: "Melborne", hex: "#BA5109" },
     { name: "Valentine I", hex: "#B94000" },
+    { name: "Popsicle", hex: "#e80085" },
+    
   ],
   oranges: [
     { name: "Thompson I", hex: "#D28B49" },
@@ -367,6 +370,8 @@ const organizedColors = {
     { name: "Tidal", hex: "#E0DEAF" },
     { name: "Carmichael II", hex: "#4A5443" },
     { name: "Carmichael III", hex: "#759F8C" },
+    { name: "LuckCharm", hex: "#5ae500" },
+    
   ],
 
   blues: [ 
