@@ -49,6 +49,8 @@ const organizedColors = {
 
   ],
   greys: [ 
+    
+    { name: "Apple", hex: "#8b8c85" },
     { name: "Modernist", hex: "#E0E2D7" },
     { name: "Snow Clouds II", hex: "#D5D9C3" },
     { name: "Snow Clouds III", hex: "#CCD1B9" },
