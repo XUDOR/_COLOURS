@@ -1,7 +1,6 @@
 const organizedColors = {
   whites: [
     { name: "Snow Clouds II", hex: "#FEFEFA" },
-   
     { name: "Snow Clouds IV", hex: "#FEFEFD" },
     { name: "Cardboard", hex: "#F9F9F7" },
     { name: "Estate", hex: "#FAFAFA" },
@@ -14,12 +13,13 @@ const organizedColors = {
     { name: "Testament", hex: "#f9f9f2" },
     { name: "snow", hex: "#F8FDFF" },
     { name: "Raincloud", hex: "#F1F8FF" },
-
-
+  
   ],
+
+
   Neutrals: [
+    { name: "Dove", hex: "#EAE9DF" },
     { name: "Algonquin", hex: "#EAE9C5" },
-   
     { name: "Sandcastle", hex: "#D6D1BA" },
     { name: "Portfolio", hex: "#E2DEBF" },
     { name: "Hemp Cnavas", hex: "#EBEDE4" },
@@ -37,6 +37,7 @@ const organizedColors = {
     { name: "Fresh Cream", hex: "#F4F3C3" },
     { name: "d’Affinois", hex: "#F9F8E8" },
     { name: "Hemp", hex: "#F2F2E7" },
+    { name: "Hemp II", hex: "#D3D0BA" },
     { name: "Bone", hex: "#F4F4EA" },
     { name: "Orchid", hex: "#F2EEDD" },
     { name: "Paperback", hex: "#F2EFD1" },
@@ -49,7 +50,7 @@ const organizedColors = {
 
   ],
   greys: [ 
-    
+    { name: "Technique", hex: "#ADACA1" },
     { name: "Apple", hex: "#8b8c85" },
     { name: "Modernist", hex: "#E0E2D7" },
     { name: "Snow Clouds II", hex: "#D5D9C3" },
@@ -283,6 +284,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Woodland", hex: "#3F3A15" },
     { name: "Carr I", hex: "#9DAB71" },
     { name: "Carr II", hex: "#585D42" },
     { name: "Carr III", hex: "#5E5633" },
