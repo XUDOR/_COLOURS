@@ -266,11 +266,12 @@ const organizedColors = {
     { name: "Oriole", hex: "#D36922" },
     { name: "Mandarin", hex: "#EF8A11" },
     { name: "Citrouille", hex: "#F49B0C" },
+    
+  ],
+  yellows: [
     { name: "Marmalade", hex: "#D09F3C" },
     { name: "Apricot", hex: "#BC8A1B" },
     { name: "Gumdrop", hex: "#FEB637" },
-  ],
-  yellows: [
     { name: "NewDay", hex: "#E2AB10" },
     { name: "coneFlower", hex: "#ffc306" },
     { name: "Buttercup", hex: "#EBC81A" },
