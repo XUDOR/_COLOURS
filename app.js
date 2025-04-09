@@ -50,6 +50,7 @@ const organizedColors = {
 
   ],
   greys: [ 
+    
     { name: "Technique", hex: "#ADACA1" },
     { name: "Apple", hex: "#8b8c85" },
     { name: "Modernist", hex: "#E0E2D7" },
@@ -132,6 +133,7 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+    { name: "Shroud", hex: "#151211" },
     { name: "Carr Black", hex: "#20231F" },
     { name: "Thompson Black", hex: "#202323" },
     { name: "Jackson Black", hex: "#291E27" },
@@ -205,6 +207,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "rouiller", hex: "#3A2319"},
     { name: "Jackson I", hex: "#C5131A"},
     { name: "Jackson II", hex: "#8D2016"},
     { name: "Jackson III", hex: "#7A140B"},
@@ -250,6 +253,7 @@ const organizedColors = {
     
   ],
   oranges: [
+    { name: "Harissa", hex: "#cb450b" },
     { name: "Thompson I", hex: "#D28B49" },
     { name: "Thompson II", hex: "#C48044" },
     { name: "Carr Organge", hex: "#B36734" },
@@ -284,6 +288,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Sherwood", hex: "#584D24" },
     { name: "Woodland", hex: "#3F3A15" },
     { name: "Carr I", hex: "#9DAB71" },
     { name: "Carr II", hex: "#585D42" },
@@ -379,6 +384,8 @@ const organizedColors = {
   ],
 
   blues: [ 
+    { name: "Details", hex: "#0E5960" },
+    { name: "Beyond", hex: "#0597A1" },
     { name: "SmoothText", hex: "#a9bedb" },
     { name: "Carmichael I", hex: "#30494C" },
     { name: "Snow Clouds", hex: "#859E98" },
@@ -459,6 +466,7 @@ const organizedColors = {
     { name: "Dolphin 2", hex: "#8BA4A5" },
   ],
   purples: [
+    { name: "Status", hex: "#59304C" },
     { name: "Carr IV", hex: "#5B2130" },
     { name: "Carr V", hex: "#60362B" },
     { name: "Carr VII", hex: "#5D343F" },
