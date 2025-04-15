@@ -18,6 +18,9 @@ const organizedColors = {
 
 
   Neutrals: [
+    { name: "Roses", hex: "#FDF6F6" },
+    { name: "Summer Blush", hex: "#F7F0E7" },
+    { name: "Ru Ware", hex: "#eff4ea" },
     { name: "Dove", hex: "#EAE9DF" },
     { name: "Algonquin", hex: "#EAE9C5" },
     { name: "Sandcastle", hex: "#D6D1BA" },
@@ -289,6 +292,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+
+    { name: "Papyrus", hex: "#C2C48D" },
     { name: "Sherwood", hex: "#584D24" },
     { name: "Woodland", hex: "#3F3A15" },
     { name: "Carr I", hex: "#9DAB71" },
@@ -307,7 +312,6 @@ const organizedColors = {
     { name: "Jungle I", hex: "#82bf0c" },
     { name: "Opportunity", hex: "#69a535" },
     { name: "Birch Leaf", hex: "#5c7226" },
-    { name: "Ru Ware", hex: "#eff4ea" },
     { name: "Cereal Bowl", hex: "#e0e8d3" },
     { name: "Contract", hex: "#497a09" },
     { name: "Fern Modern", hex: "#26443E" },
@@ -384,7 +388,8 @@ const organizedColors = {
     
   ],
 
-  blues: [ 
+  blues: [
+    { name: "Submarine", hex: "#264951" },
     { name: "Details", hex: "#0E5960" },
     { name: "Beyond", hex: "#0597A1" },
     { name: "SmoothText", hex: "#a9bedb" },
@@ -502,8 +507,6 @@ const organizedColors = {
     { name: "Lucian II", hex: "#DBAC9D" },
     { name: "SpringRose", hex: "#D39990" },
     { name: "Lucian 3", hex: "#D8B7B0" },
-    { name: "Roses", hex: "#FDF6F6" },
-    { name: "Summer Blush", hex: "#F7F0E7" },
     { name: "Unicorn", hex: "#EADDCA" },
     { name: "Parchment", hex: "#E5D8C7" },
     { name: "Raw Milk", hex: "#E5D4B1" }
