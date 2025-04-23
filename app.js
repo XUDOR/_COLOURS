@@ -18,6 +18,7 @@ const organizedColors = {
 
 
   Neutrals: [
+    { name: "Chartruessy", hex: "#E8EFE4" },
     { name: "Roses", hex: "#FDF6F6" },
     { name: "Summer Blush", hex: "#F7F0E7" },
     { name: "Ru Ware", hex: "#eff4ea" },
@@ -136,6 +137,7 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+    { name: "NuBlack", hex: "#383636" },
     { name: "Shroud", hex: "#151211" },
     { name: "Carr Black", hex: "#20231F" },
     { name: "Thompson Black", hex: "#202323" },
