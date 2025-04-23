@@ -53,7 +53,7 @@ const organizedColors = {
 
   ],
   greys: [ 
-    
+    { name: "AccentGray", hex: "#E2E2D5" },
     { name: "Technique", hex: "#ADACA1" },
     { name: "Apple", hex: "#8b8c85" },
     { name: "Modernist", hex: "#E0E2D7" },
@@ -241,6 +241,7 @@ const organizedColors = {
     { name: "Fig", hex: "#774D4D" },
     { name: "Rhubarb I", hex: "#9D4B45" },
     { name: "Rhubarb II", hex: "#a54141" },
+    { name: "Rhubarb Neue", hex: "#9E6161" },
     { name: "Swallow", hex: "#A24035" },
     { name: "Chelan", hex: "#57030A" },
     { name: "Robin", hex: "#A32E0A" },
