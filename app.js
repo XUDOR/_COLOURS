@@ -54,6 +54,7 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "AppleStore", hex: "#E5E5E5" },
     { name: "AccentGray", hex: "#E2E2D5" },
     { name: "Technique", hex: "#ADACA1" },
     { name: "Apple", hex: "#8b8c85" },
@@ -388,6 +389,7 @@ const organizedColors = {
     { name: "Carmichael II", hex: "#4A5443" },
     { name: "Carmichael III", hex: "#759F8C" },
     { name: "LuckCharm", hex: "#5ae500" },
+    { name: "Loam", hex: "#E3E8DD" },
     
   ],
 
