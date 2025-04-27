@@ -54,6 +54,9 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "Gallery", hex: "#AAB29A" },
+    { name: "NEW-Reed", hex: "#9DAA9F" },
+    { name: "egyptian", hex: "#ECF2E9" },
     { name: "AppleStore", hex: "#E5E5E5" },
     { name: "AccentGray", hex: "#E2E2D5" },
     { name: "Technique", hex: "#ADACA1" },
@@ -213,6 +216,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Meridians I", hex: "#C73513" },
     { name: "rouiller", hex: "#3A2319"},
     { name: "Jackson I", hex: "#C5131A"},
     { name: "Jackson II", hex: "#8D2016"},
@@ -296,7 +300,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
-
+    { name: "Atelier", hex: "#AFB78D" },
+    { name: "Meridians II", hex: "#AFD421" },
     { name: "Papyrus", hex: "#C2C48D" },
     { name: "Sherwood", hex: "#584D24" },
     { name: "Woodland", hex: "#3F3A15" },
