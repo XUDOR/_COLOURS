@@ -18,6 +18,7 @@ const organizedColors = {
 
 
   Neutrals: [
+    { name: "watercolour", hex: "#F9F9F4" },
     { name: "Chartruessy", hex: "#E8EFE4" },
     { name: "Roses", hex: "#FDF6F6" },
     { name: "Summer Blush", hex: "#F7F0E7" },
@@ -54,6 +55,10 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "Barcelona", hex: "#3d3a36" },
+    { name: "St. Etienne", hex: "#525445" },
+    { name: "Placeholder II", hex: "#b8bca7" },
+    { name: "Amalfi", hex: "#dcddca" },
     { name: "Gallery", hex: "#AAB29A" },
     { name: "NEW-Reed", hex: "#9DAA9F" },
     { name: "egyptian", hex: "#ECF2E9" },
@@ -300,6 +305,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Berets", hex: "#293a07" },
     { name: "Atelier", hex: "#AFB78D" },
     { name: "Meridians II", hex: "#AFD421" },
     { name: "Papyrus", hex: "#C2C48D" },
@@ -501,6 +507,7 @@ const organizedColors = {
 
   ],
   FleshTones: [
+    { name: "Sherbert", hex: "#e2d9cf"},
     { name: "Harris V", hex: "#AD5453"},
     { name: "Harris III", hex: "#A75B57"},
     { name: "Sakura III", hex: "#F4EAEB" },
