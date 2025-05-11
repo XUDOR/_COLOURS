@@ -16,8 +16,9 @@ const organizedColors = {
   
   ],
 
-
   Neutrals: [
+    { name: "ricePaper", hex: "#fcfcfa" },
+    { name: "Washi", hex: "#f9f6f2" },
     { name: "watercolour", hex: "#F9F9F4" },
     { name: "Chartruessy", hex: "#E8EFE4" },
     { name: "Roses", hex: "#FDF6F6" },
@@ -55,6 +56,7 @@ const organizedColors = {
 
   ],
   greys: [ 
+    { name: "Conte II", hex: "#3f372a" },
     { name: "Barcelona", hex: "#3d3a36" },
     { name: "St. Etienne", hex: "#525445" },
     { name: "Placeholder II", hex: "#b8bca7" },
@@ -221,6 +223,9 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Crimsons", hex: "#7a2305" },
+    { name: "Mondrian II", hex: "#e80c22" },
+    { name: "Mondrian", hex: "#9e0505" },
     { name: "Meridians I", hex: "#C73513" },
     { name: "rouiller", hex: "#3A2319"},
     { name: "Jackson I", hex: "#C5131A"},
@@ -269,6 +274,7 @@ const organizedColors = {
     
   ],
   oranges: [
+    { name: "Neroli III", hex: "#e85522" },
     { name: "Harissa", hex: "#cb450b" },
     { name: "Thompson I", hex: "#D28B49" },
     { name: "Thompson II", hex: "#C48044" },
@@ -285,7 +291,9 @@ const organizedColors = {
     
   ],
   yellows: [
-    { name: "Marmalade", hex: "#D09F3C" },
+    { name: "yellow prime I", hex: "#e8c221" },
+    { name: "yellow prime II", hex: "#ffaa00" },
+    { name: "Marmalade", hex: "#ffaa00" },
     { name: "Apricot", hex: "#BC8A1B" },
     { name: "Gumdrop", hex: "#FEB637" },
     { name: "NewDay", hex: "#E2AB10" },
@@ -299,12 +307,14 @@ const organizedColors = {
     { name: "Cat", hex: "#DDB73E" },
     { name: "DeckShoe", hex: "#E8CC87" },
     { name: "Beurre Blanc", hex: "#FCE883" },
+    { name: "Peach", hex: "#ffdf9f"},
     { name: "Sphinx", hex: "#C69A0C" },
     { name: "Cowboy", hex: "#BCAA08" },
     { name: "Temple", hex: "#ECB235" },
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Midori", hex: "#306600" },
     { name: "Berets", hex: "#293a07" },
     { name: "Atelier", hex: "#AFB78D" },
     { name: "Meridians II", hex: "#AFD421" },
@@ -405,6 +415,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "blauwheid", hex: "#040d7c" },
     { name: "Submarine", hex: "#264951" },
     { name: "Details II", hex: "#0a4348" },
     { name: "Details", hex: "#0E5960" },
@@ -507,6 +518,7 @@ const organizedColors = {
 
   ],
   FleshTones: [
+    
     { name: "Sherbert", hex: "#e2d9cf"},
     { name: "Harris V", hex: "#AD5453"},
     { name: "Harris III", hex: "#A75B57"},
