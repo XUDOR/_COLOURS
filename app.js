@@ -148,6 +148,7 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+    { name: "BloodOrange", hex: "#2a2011" },
     { name: "NuBlack", hex: "#383636" },
     { name: "Shroud", hex: "#151211" },
     { name: "Carr Black", hex: "#20231F" },
