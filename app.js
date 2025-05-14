@@ -55,7 +55,11 @@ const organizedColors = {
     { name: "Old Bone", hex: "#E8E8CA" },
 
   ],
-  greys: [ 
+  greys: [
+     { name: "Maybe", hex: "#b7bab5" },
+    { name: "Modern Button", hex: "#515151" },
+    { name: "Tech Support", hex: "#a5a2a2" },
+    { name: "Seurat", hex: "#282825" },
     { name: "Conte II", hex: "#3f372a" },
     { name: "Barcelona", hex: "#3d3a36" },
     { name: "St. Etienne", hex: "#525445" },
