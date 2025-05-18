@@ -17,6 +17,7 @@ const organizedColors = {
   ],
 
   Neutrals: [
+    { name: "Nav", hex: "#e0daca" },
     { name: "ricePaper", hex: "#fcfcfa" },
     { name: "Washi", hex: "#f9f6f2" },
     { name: "watercolour", hex: "#F9F9F4" },
@@ -56,7 +57,11 @@ const organizedColors = {
 
   ],
   greys: [
-     { name: "Maybe", hex: "#b7bab5" },
+    { name: "outerWalls", hex: "#e4ead8" },
+    { name: "Floor", hex: "#343531" },
+    { name: "interiorWall", hex: "#aab29a" },
+    { name: "SilverFox", hex: "#888b87" },
+    { name: "Maybe", hex: "#b7bab5" },
     { name: "Modern Button", hex: "#515151" },
     { name: "Tech Support", hex: "#a5a2a2" },
     { name: "Seurat", hex: "#282825" },
