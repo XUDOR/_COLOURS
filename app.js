@@ -324,6 +324,10 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Train Set", hex: "#6b6b54" },
+    { name: "projectDoc", hex: "#dbddc0" },
+    { name: "cactus", hex: "#a3aa44" },
+    { name: "communist", hex: "#3d4f29" },
     { name: "Midori", hex: "#306600" },
     { name: "Berets", hex: "#293a07" },
     { name: "Atelier", hex: "#AFB78D" },
@@ -425,6 +429,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "important", hex: "#bfd4d6" },
     { name: "blauwheid", hex: "#040d7c" },
     { name: "Submarine", hex: "#264951" },
     { name: "Details II", hex: "#0a4348" },
