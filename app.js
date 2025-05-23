@@ -57,6 +57,7 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "Centre", hex: "#929b84" },
     { name: "outerWalls", hex: "#e4ead8" },
     { name: "Floor", hex: "#343531" },
     { name: "interiorWall", hex: "#aab29a" },
@@ -429,6 +430,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Current", hex: "#0b4a60" },
     { name: "important", hex: "#bfd4d6" },
     { name: "blauwheid", hex: "#040d7c" },
     { name: "Submarine", hex: "#264951" },
