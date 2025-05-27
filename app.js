@@ -430,6 +430,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Certainty", hex: "#0e9bcc" },
     { name: "Current", hex: "#0b4a60" },
     { name: "important", hex: "#bfd4d6" },
     { name: "blauwheid", hex: "#040d7c" },
