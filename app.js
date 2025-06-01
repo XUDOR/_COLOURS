@@ -17,6 +17,7 @@ const organizedColors = {
   ],
 
   Neutrals: [
+    { name: "Presentation", hex: "#f4f3ed" },
     { name: "Nav", hex: "#e0daca" },
     { name: "ricePaper", hex: "#fcfcfa" },
     { name: "Washi", hex: "#f9f6f2" },
@@ -57,6 +58,7 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "Wetland", hex: "#3f3d2d" },
     { name: "Centre", hex: "#929b84" },
     { name: "outerWalls", hex: "#e4ead8" },
     { name: "Floor", hex: "#343531" },
