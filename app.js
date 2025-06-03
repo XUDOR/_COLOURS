@@ -58,6 +58,8 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "SilverFox", hex: "#b2aea1" },
+    { name: "Bark Modern", hex: "#636055" },
     { name: "Wetland", hex: "#3f3d2d" },
     { name: "Centre", hex: "#929b84" },
     { name: "outerWalls", hex: "#e4ead8" },
@@ -201,6 +203,8 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "Poupon", hex: "#b7af88" },
+    { name: "Wooden", hex: "#353227" },
     { name: "Varley", hex: "#867E51" },
     { name: "Varley II", hex: "#6B6143" },
     { name: "Varley III", hex: "#BEA36C" },
