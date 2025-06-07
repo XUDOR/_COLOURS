@@ -58,6 +58,7 @@ const organizedColors = {
 
   ],
   greys: [
+    
     { name: "SilverFox", hex: "#b2aea1" },
     { name: "Bark Modern", hex: "#636055" },
     { name: "Wetland", hex: "#3f3d2d" },
@@ -331,6 +332,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "ProModel", hex: "#04211f" },
+    { name: "Distinct", hex: "#0f423e" },
     { name: "Train Set", hex: "#6b6b54" },
     { name: "projectDoc", hex: "#dbddc0" },
     { name: "cactus", hex: "#a3aa44" },
@@ -397,7 +400,7 @@ const organizedColors = {
     { name: "JungleLeaf Reginula", hex: "#308408" },
     { name: "Reginula II", hex: "#A5A247" },
     { name: "Dragon II", hex: "#54582B" },
-    { name: "Turtle", hex: "#9AA200" },
+    { name: "Turtle 2", hex: "#9AA200" },
     { name: "TreeLeaf I", hex: "#A79F43" },
     { name: "TreeLeaf III", hex: "#4E491D" },
     { name: "TreeLeaf II", hex: "#60632A" },
@@ -436,6 +439,9 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Attention", hex: "#083644" },
+    { name: "Cart Nouveaux", hex: "#91b7b5" },
+    { name: "Turtle", hex: "#4b6d6b" },
     { name: "Certainty", hex: "#0e9bcc" },
     { name: "Current", hex: "#0b4a60" },
     { name: "important", hex: "#bfd4d6" },
