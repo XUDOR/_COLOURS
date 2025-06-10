@@ -17,6 +17,7 @@ const organizedColors = {
   ],
 
   Neutrals: [
+    { name: "basic", hex: "#f9f8f4" },
     { name: "Presentation", hex: "#f4f3ed" },
     { name: "Nav", hex: "#e0daca" },
     { name: "ricePaper", hex: "#fcfcfa" },
@@ -58,8 +59,8 @@ const organizedColors = {
 
   ],
   greys: [
-    
-    { name: "SilverFox", hex: "#b2aea1" },
+    { name: "SilverFox", hex: "#c6c4be" },
+    { name: "tarpaulin", hex: "#b2aea1" },
     { name: "Bark Modern", hex: "#636055" },
     { name: "Wetland", hex: "#3f3d2d" },
     { name: "Centre", hex: "#929b84" },
@@ -163,6 +164,7 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+    { name: "Espresso", hex: "#282525" },
     { name: "BloodOrange", hex: "#2a2011" },
     { name: "NuBlack", hex: "#383636" },
     { name: "Shroud", hex: "#151211" },
@@ -204,6 +206,8 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "Mossy", hex: "#8e793d" },
+    { name: "Furniture", hex: "#261f08" },
     { name: "Poupon", hex: "#b7af88" },
     { name: "Wooden", hex: "#353227" },
     { name: "Varley", hex: "#867E51" },
@@ -332,6 +336,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    
     { name: "ProModel", hex: "#04211f" },
     { name: "Distinct", hex: "#0f423e" },
     { name: "Train Set", hex: "#6b6b54" },
