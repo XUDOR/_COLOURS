@@ -444,6 +444,8 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Denim", hex: "#072a51" },
+    { name: "Pegusus", hex: "#d1e2e5" },
     { name: "Attention", hex: "#083644" },
     { name: "Cart Nouveaux", hex: "#91b7b5" },
     { name: "Turtle", hex: "#4b6d6b" },
@@ -463,7 +465,7 @@ const organizedColors = {
     { name: "Opal", hex: "#48BBD8" },
     { name: "Carnival", hex: "#DCF4FF" },
     { name: "VW BUG", hex: "#A1DCF0" },
-    { name: "Bluebell II", hex: "#73B4E0" },
+    { name: "Bluebell II", hex: "#73B4E0" },  
     { name: "Approval", hex: "#0A375B" },
     { name: "Solid", hex: "#1F3AAD" },
     { name: "Beautiful", hex: "#0C2D77" },
