@@ -1,5 +1,6 @@
 const organizedColors = {
   whites: [
+    { name: "Accented", hex: "#e4f2f1" },
     { name: "Snow Clouds II", hex: "#FEFEFA" },
     { name: "Snow Clouds IV", hex: "#FEFEFD" },
     { name: "Cardboard", hex: "#F9F9F7" },
@@ -336,7 +337,7 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
-    
+    { name: "dark", hex: "#575b53" },
     { name: "ProModel", hex: "#04211f" },
     { name: "Distinct", hex: "#0f423e" },
     { name: "Train Set", hex: "#6b6b54" },
@@ -444,7 +445,12 @@ const organizedColors = {
   ],
 
   blues: [
+
+    { name: "Spellbound", hex: "#1e2123" },
+    { name: "Pro", hex: "#2f4f63" },
+    { name: "Narwal VI", hex: "#103836" },
     { name: "Denim", hex: "#072a51" },
+    { name: "power", hex: "#739293" },
     { name: "Pegusus", hex: "#d1e2e5" },
     { name: "Attention", hex: "#083644" },
     { name: "Cart Nouveaux", hex: "#91b7b5" },
