@@ -60,6 +60,7 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "Wednesday", hex: "#7a7272" },
     { name: "SilverFox", hex: "#c6c4be" },
     { name: "tarpaulin", hex: "#b2aea1" },
     { name: "Bark Modern", hex: "#636055" },
@@ -314,6 +315,8 @@ const organizedColors = {
     
   ],
   yellows: [
+
+    { name: "Favourite", hex: "#ffce00" },
     { name: "yellow prime I", hex: "#e8c221" },
     { name: "yellow prime II", hex: "#ffaa00" },
     { name: "Marmalade", hex: "#ffaa00" },
