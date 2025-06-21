@@ -448,7 +448,9 @@ const organizedColors = {
   ],
 
   blues: [
-
+    { name: "turtleShell", hex: "#127077" },
+    { name: "Neptune", hex: "#234956" },
+    { name: "Pluto", hex: "#367687" },
     { name: "Spellbound", hex: "#1e2123" },
     { name: "Pro", hex: "#2f4f63" },
     { name: "Narwal VI", hex: "#103836" },
