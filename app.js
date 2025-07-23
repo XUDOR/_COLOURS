@@ -14,7 +14,8 @@ const organizedColors = {
     { name: "Testament", hex: "#f9f9f2" },
     { name: "snow", hex: "#F8FDFF" },
     { name: "Raincloud", hex: "#F1F8FF" },
-  
+    { name: "Whisper", hex: "#f7f3f6" },
+
   ],
 
   Neutrals: [
@@ -166,6 +167,7 @@ const organizedColors = {
     { name: "Pottery", hex: "#BBBCA7" },
   ],
   blacks: [
+    { name: "NuBlaaq", hex: "#0f0e0e" },
     { name: "Espresso", hex: "#282525" },
     { name: "BloodOrange", hex: "#2a2011" },
     { name: "NuBlack", hex: "#383636" },
@@ -251,23 +253,23 @@ const organizedColors = {
     { name: "Mondrian II", hex: "#e80c22" },
     { name: "Mondrian", hex: "#9e0505" },
     { name: "Meridians I", hex: "#C73513" },
-    { name: "rouiller", hex: "#3A2319"},
-    { name: "Jackson I", hex: "#C5131A"},
-    { name: "Jackson II", hex: "#8D2016"},
-    { name: "Jackson III", hex: "#7A140B"},
-    { name: "Jackson IV", hex: "#CA381C"},
-    { name: "Jackson V", hex: "#DA5A35"},
-    { name: "Jackson VI", hex: "#973615"},
-    { name: "Jackson VII", hex: "#A53E29"},
-    { name: "Jackson VIII", hex: "#A5302F"},
-    { name: "Harris I", hex: "#864132"},
-    { name: "Harris II", hex: "#8D4B49"},
-    { name: "Harris IV", hex: "#8B5047"},
-    { name: "Harris VI", hex: "#8E3137"},
-    { name: "Motorcycle", hex: "#FC003C"},
-    { name: "Ridinghood", hex: "#A8001C"},
-    { name: "Blood", hex: "#6D000D"},
-    { name: "Aka", hex: "#DD1905"},
+    { name: "rouiller", hex: "#3A2319" },
+    { name: "Jackson I", hex: "#C5131A" },
+    { name: "Jackson II", hex: "#8D2016" },
+    { name: "Jackson III", hex: "#7A140B" },
+    { name: "Jackson IV", hex: "#CA381C" },
+    { name: "Jackson V", hex: "#DA5A35" },
+    { name: "Jackson VI", hex: "#973615" },
+    { name: "Jackson VII", hex: "#A53E29" },
+    { name: "Jackson VIII", hex: "#A5302F" },
+    { name: "Harris I", hex: "#864132" },
+    { name: "Harris II", hex: "#8D4B49" },
+    { name: "Harris IV", hex: "#8B5047" },
+    { name: "Harris VI", hex: "#8E3137" },
+    { name: "Motorcycle", hex: "#FC003C" },
+    { name: "Ridinghood", hex: "#A8001C" },
+    { name: "Blood", hex: "#6D000D" },
+    { name: "Aka", hex: "#DD1905" },
     { name: "Cadmium", hex: "#E82B05" },
     { name: "Ruby", hex: "#160804" },
     { name: "Scarlet", hex: "#9B2345" },
@@ -295,7 +297,7 @@ const organizedColors = {
     { name: "Melborne", hex: "#BA5109" },
     { name: "Valentine I", hex: "#B94000" },
     { name: "Popsicle", hex: "#e80085" },
-    
+
   ],
   oranges: [
     { name: "Neroli III", hex: "#e85522" },
@@ -312,7 +314,7 @@ const organizedColors = {
     { name: "Oriole", hex: "#D36922" },
     { name: "Mandarin", hex: "#EF8A11" },
     { name: "Citrouille", hex: "#F49B0C" },
-    
+
   ],
   yellows: [
 
@@ -333,7 +335,7 @@ const organizedColors = {
     { name: "Cat", hex: "#DDB73E" },
     { name: "DeckShoe", hex: "#E8CC87" },
     { name: "Beurre Blanc", hex: "#FCE883" },
-    { name: "Peach", hex: "#ffdf9f"},
+    { name: "Peach", hex: "#ffdf9f" },
     { name: "Sphinx", hex: "#C69A0C" },
     { name: "Cowboy", hex: "#BCAA08" },
     { name: "Temple", hex: "#ECB235" },
@@ -444,10 +446,11 @@ const organizedColors = {
     { name: "Carmichael III", hex: "#759F8C" },
     { name: "LuckCharm", hex: "#5ae500" },
     { name: "Loam", hex: "#E3E8DD" },
-    
+
   ],
 
   blues: [
+    { name: "Frosti", hex: "#bed1d9" },
     { name: "turtleShell", hex: "#127077" },
     { name: "Neptune", hex: "#234956" },
     { name: "Pluto", hex: "#367687" },
@@ -476,7 +479,7 @@ const organizedColors = {
     { name: "Opal", hex: "#48BBD8" },
     { name: "Carnival", hex: "#DCF4FF" },
     { name: "VW BUG", hex: "#A1DCF0" },
-    { name: "Bluebell II", hex: "#73B4E0" },  
+    { name: "Bluebell II", hex: "#73B4E0" },
     { name: "Approval", hex: "#0A375B" },
     { name: "Solid", hex: "#1F3AAD" },
     { name: "Beautiful", hex: "#0C2D77" },
@@ -566,10 +569,10 @@ const organizedColors = {
 
   ],
   FleshTones: [
-    
-    { name: "Sherbert", hex: "#e2d9cf"},
-    { name: "Harris V", hex: "#AD5453"},
-    { name: "Harris III", hex: "#A75B57"},
+
+    { name: "Sherbert", hex: "#e2d9cf" },
+    { name: "Harris V", hex: "#AD5453" },
+    { name: "Harris III", hex: "#A75B57" },
     { name: "Sakura III", hex: "#F4EAEB" },
     { name: "Lychee I", hex: "#EFDFDF" },
     { name: "Plum Sauce", hex: "#A8978F" },
