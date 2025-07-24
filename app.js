@@ -61,6 +61,7 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "Tester", hex: "#6d6969" },
     { name: "Wednesday", hex: "#7a7272" },
     { name: "SilverFox", hex: "#c6c4be" },
     { name: "tarpaulin", hex: "#b2aea1" },
@@ -249,6 +250,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Rhubarb III", hex: "#6d3e3e" },
     { name: "Crimsons", hex: "#7a2305" },
     { name: "Mondrian II", hex: "#e80c22" },
     { name: "Mondrian", hex: "#9e0505" },
