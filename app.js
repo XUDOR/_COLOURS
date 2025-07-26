@@ -1,5 +1,6 @@
 const organizedColors = {
   whites: [
+    { name: "Subtlety", hex: "#f4f3f2" },
     { name: "Accented", hex: "#e4f2f1" },
     { name: "Snow Clouds II", hex: "#FEFEFA" },
     { name: "Snow Clouds IV", hex: "#FEFEFD" },
@@ -15,6 +16,8 @@ const organizedColors = {
     { name: "snow", hex: "#F8FDFF" },
     { name: "Raincloud", hex: "#F1F8FF" },
     { name: "Whisper", hex: "#f7f3f6" },
+   
+
 
   ],
 
