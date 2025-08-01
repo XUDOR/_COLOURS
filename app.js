@@ -1,5 +1,6 @@
 const organizedColors = {
   whites: [
+     { name: "Selection I", hex: "#f0f4ed" },
     { name: "Subtlety", hex: "#f4f3f2" },
     { name: "Accented", hex: "#e4f2f1" },
     { name: "Snow Clouds II", hex: "#FEFEFA" },
@@ -64,7 +65,9 @@ const organizedColors = {
 
   ],
   greys: [
+   
     { name: "Tester", hex: "#6d6969" },
+    { name: "ProjectCover", hex: "#caccb4" },
     { name: "Wednesday", hex: "#7a7272" },
     { name: "SilverFox", hex: "#c6c4be" },
     { name: "tarpaulin", hex: "#b2aea1" },
@@ -253,6 +256,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Parisian", hex: "#e24b17" },
     { name: "Rhubarb III", hex: "#6d3e3e" },
     { name: "Crimsons", hex: "#7a2305" },
     { name: "Mondrian II", hex: "#e80c22" },
@@ -347,6 +351,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Commando", hex: "#4e544a" },
+    { name: "Charteussian", hex: "#cde5bd" },
     { name: "dark", hex: "#575b53" },
     { name: "ProModel", hex: "#04211f" },
     { name: "Distinct", hex: "#0f423e" },
