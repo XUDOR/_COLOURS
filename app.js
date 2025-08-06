@@ -351,6 +351,9 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Audouinella", hex: "#23261e" },
+    { name: "Bertilak", hex: "#29380f" },
+    { name: "NuKermit", hex: "#748e4c" },
     { name: "Commando", hex: "#4e544a" },
     { name: "Charteussian", hex: "#cde5bd" },
     { name: "dark", hex: "#575b53" },
@@ -461,6 +464,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Puddles", hex: "#404d65" },
     { name: "Frosti", hex: "#bed1d9" },
     { name: "turtleShell", hex: "#127077" },
     { name: "Neptune", hex: "#234956" },
