@@ -1,6 +1,6 @@
 const organizedColors = {
   whites: [
-     { name: "Selection I", hex: "#f0f4ed" },
+    { name: "Selection I", hex: "#f0f4ed" },
     { name: "Subtlety", hex: "#f4f3f2" },
     { name: "Accented", hex: "#e4f2f1" },
     { name: "Snow Clouds II", hex: "#FEFEFA" },
@@ -17,7 +17,8 @@ const organizedColors = {
     { name: "snow", hex: "#F8FDFF" },
     { name: "Raincloud", hex: "#F1F8FF" },
     { name: "Whisper", hex: "#f7f3f6" },
-   
+    { name: "Prospective", hex: "#f2f4ed" },
+
 
 
   ],
@@ -26,6 +27,7 @@ const organizedColors = {
     { name: "basic", hex: "#f9f8f4" },
     { name: "Presentation", hex: "#f4f3ed" },
     { name: "Nav", hex: "#e0daca" },
+    { name: "Vanilla", hex: "#f7ead2" },
     { name: "ricePaper", hex: "#fcfcfa" },
     { name: "Washi", hex: "#f9f6f2" },
     { name: "watercolour", hex: "#F9F9F4" },
@@ -62,10 +64,13 @@ const organizedColors = {
     { name: "1000 TC Linen", hex: "#EFE7C5" },
     { name: "Fromage de Meaux", hex: "#EFEAAB" },
     { name: "Old Bone", hex: "#E8E8CA" },
+    { name: "egyptian", hex: "#ECF2E9" },
+    { name: "Shigaraki", hex: "#EFEFE6" },
+    { name: "Moderno", hex: "#EFEFE6" },
 
   ],
   greys: [
-   
+    { name: "Kull", hex: "#2b2a27" },
     { name: "Tester", hex: "#6d6969" },
     { name: "ProjectCover", hex: "#caccb4" },
     { name: "Wednesday", hex: "#7a7272" },
@@ -89,7 +94,6 @@ const organizedColors = {
     { name: "Amalfi", hex: "#dcddca" },
     { name: "Gallery", hex: "#AAB29A" },
     { name: "NEW-Reed", hex: "#9DAA9F" },
-    { name: "egyptian", hex: "#ECF2E9" },
     { name: "AppleStore", hex: "#E5E5E5" },
     { name: "AccentGray", hex: "#E2E2D5" },
     { name: "Technique", hex: "#ADACA1" },
@@ -108,7 +112,6 @@ const organizedColors = {
     { name: "HI FI", hex: "#605E4A" },
     { name: "Schema", hex: "#AAAAA3" },
     { name: "Noveaux", hex: "#b5c6bd" },
-    { name: "Prospective", hex: "#f2f4ed" },
     { name: "Mushroom", hex: "#e1e5d6" },
     { name: "Mushroom II", hex: "#F9F8F4" },
     { name: "Mosco", hex: "#888e7c" },
@@ -169,10 +172,9 @@ const organizedColors = {
     { name: "Glacier", hex: "#D9D9D9" },
     { name: "Glacier II", hex: "#E3E3E0" },
     { name: "StoneHouse", hex: "#C5C6B6" },
-    { name: "Shigaraki", hex: "#EFEFE6" },
-    { name: "Moderno", hex: "#EFEFE6" },
     { name: "Pottery", hex: "#BBBCA7" },
   ],
+
   blacks: [
     { name: "NuBlaaq", hex: "#0f0e0e" },
     { name: "Espresso", hex: "#282525" },
@@ -217,6 +219,7 @@ const organizedColors = {
     { name: "Iris II", hex: "#222827" },
   ],
   EarthTones: [
+    { name: "Mossa", hex: "#42391f" },
     { name: "Mossy", hex: "#8e793d" },
     { name: "Furniture", hex: "#261f08" },
     { name: "Poupon", hex: "#b7af88" },
