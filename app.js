@@ -70,6 +70,8 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "smokeSignal", hex: "#2b2a29" },
+    { name: "Asmodius", hex: "#666d6b" },
     { name: "Kull", hex: "#2b2a27" },
     { name: "Tester", hex: "#6d6969" },
     { name: "ProjectCover", hex: "#caccb4" },
@@ -467,6 +469,7 @@ const organizedColors = {
   ],
 
   blues: [
+    { name: "Title", hex: "#182238" },
     { name: "Puddles", hex: "#404d65" },
     { name: "Frosti", hex: "#bed1d9" },
     { name: "turtleShell", hex: "#127077" },
