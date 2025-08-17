@@ -70,6 +70,7 @@ const organizedColors = {
 
   ],
   greys: [
+     { name: "Pussy Cat", hex: "#bfc4bb" },
     { name: "smokeSignal", hex: "#2b2a29" },
     { name: "Asmodius", hex: "#666d6b" },
     { name: "Kull", hex: "#2b2a27" },
