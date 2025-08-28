@@ -70,7 +70,12 @@ const organizedColors = {
 
   ],
   greys: [
-     { name: "Pussy Cat", hex: "#bfc4bb" },
+    { name: "Experiment", hex: "#bebfba" },
+    { name: "Pony", hex: "#4f4f4a" },
+    { name: "Cat II", hex: "#8b8c85" },
+    { name: "Exponent I", hex: "#dbdac8" },
+    { name: "Naples", hex: "#e4e8e2" },
+    { name: "Pussy Cat", hex: "#bfc4bb" },
     { name: "smokeSignal", hex: "#2b2a29" },
     { name: "Asmodius", hex: "#666d6b" },
     { name: "Kull", hex: "#2b2a27" },
@@ -179,6 +184,7 @@ const organizedColors = {
   ],
 
   blacks: [
+    { name: "Eclipse", hex: "#383834" },
     { name: "NuBlaaq", hex: "#0f0e0e" },
     { name: "Espresso", hex: "#282525" },
     { name: "BloodOrange", hex: "#2a2011" },
