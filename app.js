@@ -70,6 +70,8 @@ const organizedColors = {
 
   ],
   greys: [
+    { name: "Champinon", hex: "#eaeddd" },
+    { name: "Texture", hex: "#8e8d87" },
     { name: "Experiment", hex: "#bebfba" },
     { name: "Pony", hex: "#4f4f4a" },
     { name: "Cat II", hex: "#8b8c85" },
@@ -268,6 +270,7 @@ const organizedColors = {
     { name: "Leather Belt", hex: "#BAB283" }
   ],
   reds: [
+    { name: "Fuji", hex: "#c91f1b" },
     { name: "Parisian", hex: "#e24b17" },
     { name: "Rhubarb III", hex: "#6d3e3e" },
     { name: "Crimsons", hex: "#7a2305" },
@@ -363,6 +366,8 @@ const organizedColors = {
     { name: "Peach Pie", hex: "#EFAE0C" },
   ],
   greens: [
+    { name: "Contender", hex: "#c0d30b" },
+    { name: "Waxy", hex: "#b9dd33" },
     { name: "Audouinella", hex: "#23261e" },
     { name: "Bertilak", hex: "#29380f" },
     { name: "NuKermit", hex: "#748e4c" },
